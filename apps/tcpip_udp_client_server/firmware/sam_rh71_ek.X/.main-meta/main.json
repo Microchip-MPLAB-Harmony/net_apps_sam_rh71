@@ -1,0 +1,83 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.0.0",
+		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_tcpip_udp_client_server",
+		"version": "3.7.4",
+		"displayName": "TCP/IP UDP Client Server Example for SAM RH71 Family",
+		"projectName": "tcpip_udp_client_server_sam_rh71_ek",
+		"shortDescription": "The UDP Client Server configuration demonstrates creating a network client and a network server that uses the MPLAB Harmony UDP API. This demonstration shows how the UDP/IP loopback works and it is a combination of the TCP/IP UDP Client and TCP/IP UDP Server application.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.50.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=3.1.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMRH71_DFP",
+			"semverRange": "^2.4.127"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.8.0"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMRH71F20C",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit",
+				"SAM RH71 Evaluation Kit"
+			],
+			[
+				"Harmony",
+				"Peripherals",
+				"NET",
+				"GMAC"
+			],
+			[
+				"Peripherals",
+				"NET",
+				"GMAC"
+			]
+		],
+		"peripherals": [
+			"GMAC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMRH71F20C",
+			"SAM RH71 Family",
+			"NET",
+			"GMAC",
+			"UDP",
+			"Client",
+			"Server"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}

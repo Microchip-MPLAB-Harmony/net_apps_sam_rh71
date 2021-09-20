@@ -1,0 +1,84 @@
+{
+	"metaDataVersion": "1.0.0",
+	"category": "com.microchip.ide.project",
+	"content": {
+		"metaDataVersion": "1.0.0",
+		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_berkeley_udp_relay",
+		"version": "3.7.4",
+		"displayName": "TCP/IP Berkeley UDP Relay Example for SAM RH71 Family",
+		"projectName": "berkeley_udp_relay_sam_rh71_ek",
+		"shortDescription": "The Berkeley UDP Relay configuration demonstrates the use of multiple sockets for both sending and receiving.",
+		"ide": {
+			"name": "MPLABX",
+			"semverRange": ">=5.50.0"
+		},
+		"compiler": [
+			{
+				"name": "XC32",
+				"semverRange": ">=3.1.0"
+			}
+		],
+		"dfp": {
+			"name": "SAMRH71_DFP",
+			"semverRange": "^2.4.127"
+		},
+		"configurator": {
+			"name": "MHC",
+			"semverRange": ">=3.8.0"
+		},
+		"device": {
+			"metaDataVersion": "1.0.0",
+			"category": "com.microchip.portal.contentRef",
+			"content": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.device",
+				"name": "ATSAMRH71F20C",
+				"versionRange": "*"
+			}
+		},
+		"author": "Microchip",
+		"subcategories": [
+			[
+				"Development Kit",
+				"SAM RH71 Evaluation Kit"
+			],
+			[
+				"Harmony",
+				"Peripherals",
+				"NET",
+				"GMAC"
+			],
+			[
+				"Peripherals",
+				"NET",
+				"GMAC"
+			]
+		],
+		"peripherals": [
+			"GMAC"
+		],
+		"keywords": [
+			"MHC",
+			"Harmony",
+			"ATSAMRH71F20C",
+			"SAM RH71 Family",
+			"NET",
+			"GMAC",
+			"UDP",
+			"Relay",
+			"Server",
+			"Berkeley"
+		],
+		"additionalData": {
+			"longDescription": {
+				"metaDataVersion": "1.0.0",
+				"category": "com.microchip.portal.fileRef",
+				"content": {
+					"metaDataVersion": "1.0.0",
+					"fileName": "./../../readme.md",
+					"mimeType": "text/markdown"
+				}
+			}
+		}
+	}
+}
