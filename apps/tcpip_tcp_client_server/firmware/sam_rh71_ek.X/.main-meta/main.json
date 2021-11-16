@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_tcpip_tcp_client_server",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP TCP Client Server Example for SAM RH71 Family",
 		"projectName": "tcpip_tcp_client_server_sam_rh71_ek",
 		"shortDescription": "The TCP Client Server configuration demonstrates creating a network client and server that uses the MPLAB Harmony TCP API. This demonstration is a combination of the TCP/IP Client and TCP/IP Server application.",

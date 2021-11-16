@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_tcpip_udp_client_server",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP UDP Client Server Example for SAM RH71 Family",
 		"projectName": "tcpip_udp_client_server_sam_rh71_ek",
 		"shortDescription": "The UDP Client Server configuration demonstrates creating a network client and a network server that uses the MPLAB Harmony UDP API. This demonstration shows how the UDP/IP loopback works and it is a combination of the TCP/IP UDP Client and TCP/IP UDP Server application.",

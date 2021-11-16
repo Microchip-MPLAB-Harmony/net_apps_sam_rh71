@@ -8,7 +8,7 @@ nav_order: 99
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
-## Harmony 3 Network application examples for SAMRH71 family v3.7.4
+## Harmony 3 Network application examples for SAMRH71 family v3.8.0
 
 ### Development kit and demo application support
 
@@ -37,7 +37,11 @@ Following table provides number of peripheral library examples available for dif
 
 ### Known Issues
 
-- None
+- IPERF demo:
+    - Example overwrite MH3 generated code to get maximum performances with the product:
+        - Application code is relocated at startup to be executed in RAM.
+        - Cache maintenance operation is modified to execute less instructions (only one global cache maintenance for all received packets).
+    - The generated HEX file for production is not functional, the initialized data section is not exported correctly when the compiler convert the ELF to HEX. The example should be loaded to the board using the "Debug Project" button.
 
 ### Development Tools
 
@@ -56,3 +60,14 @@ Following table provides number of peripheral library examples available for dif
 * [Net v3.7.4](https://github.com/Microchip-MPLAB-Harmony/net/releases/tag/v3.7.4)
 * [Wolfssl v4.7.0](https://github.com/Microchip-MPLAB-Harmony/wolfssl/releases/tag/v4.7.0)
 * [CMSIS-FreeRTOS v10.3.1](https://github.com/Microchip-MPLAB-Harmony/CMSIS-FreeRTOS/releases/tag/v10.3.1)
+
+## Harmony 3 Network application examples for SAMRH71 family  v3.7.0
+
+### Demonstration Applications
+There are no applications for SAMRH71 added to this release.
+
+
+
+### Development Tools
+
+- [Harmony net repository, 3.7.0](https://github.com/Microchip-MPLAB-Harmony/net/tree/v3.7.0)

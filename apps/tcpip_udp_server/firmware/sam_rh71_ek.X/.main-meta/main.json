@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_tcpip_udp_server",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP UDP Server Example for SAM RH71 Family",
 		"projectName": "tcpip_udp_server_sam_rh71_ek",
 		"shortDescription": "The UDP Server configuration demonstrates creating a network server that uses the MPLAB Harmony UDP API to create a UDP/IP echo server on port 9760.",

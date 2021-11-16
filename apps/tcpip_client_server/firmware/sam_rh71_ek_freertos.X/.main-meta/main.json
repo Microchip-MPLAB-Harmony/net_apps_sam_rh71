@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_tcpip_client_server_freertos",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP TCP and UDP Client Server Example for SAM RH71 Family",
 		"projectName": "tcpip_client_server_sam_rh71_ek_freertos",
 		"shortDescription": "The TCP/IP TCP & UDP Client Server configuration demonstrates creating a network client and a network server that uses both TCP and UDP socket APIs respectively.",

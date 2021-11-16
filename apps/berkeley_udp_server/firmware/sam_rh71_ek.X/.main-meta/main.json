@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_berkeley_udp_server",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP Berkeley UDP Server Example for SAM RH71 Family",
 		"projectName": "berkeley_udp_server_sam_rh71_ek",
 		"shortDescription": "The Berkeley UDP Server configuration demonstrates creating a network client with the Berkeley API to make a UDP/IP connection to a specified port.",

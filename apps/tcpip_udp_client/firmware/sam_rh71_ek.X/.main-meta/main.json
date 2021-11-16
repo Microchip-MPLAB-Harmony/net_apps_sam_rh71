@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_tcpip_udp_client",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP UDP Client Example for SAM RH71 Family",
 		"projectName": "tcpip_udp_client_sam_rh71_ek",
 		"shortDescription": "The UDP Client configuration demonstrates creating a network Client with the API to make a UDP/IP connection to a specified port.",

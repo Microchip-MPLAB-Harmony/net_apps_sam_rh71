@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_iperf_demo",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP IPERF Demo Example for SAM RH71 Family",
 		"projectName": "iperf_demo_sam_rh71_ek",
 		"shortDescription": "The iperf demo creates an application that can be used for running iperf and measuring the network performance.",

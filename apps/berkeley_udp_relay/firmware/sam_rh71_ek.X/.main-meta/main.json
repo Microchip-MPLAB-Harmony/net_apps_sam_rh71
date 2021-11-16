@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_berkeley_udp_relay",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP Berkeley UDP Relay Example for SAM RH71 Family",
 		"projectName": "berkeley_udp_relay_sam_rh71_ek",
 		"shortDescription": "The Berkeley UDP Relay configuration demonstrates the use of multiple sockets for both sending and receiving.",

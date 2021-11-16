@@ -4,7 +4,7 @@
 	"content": {
 		"metaDataVersion": "1.0.0",
 		"name": "com.microchip.mcu32.mplabx.project.net_apps_sam_rh71_tcpip_tcp_server",
-		"version": "3.7.4",
+		"version": "3.8.0",
 		"displayName": "TCP/IP TCP Server Example for SAM RH71 Family",
 		"projectName": "tcpip_tcp_server_sam_rh71_ek",
 		"shortDescription": "The TCP/IP TCP Server configuration demonstrates creating a network server that uses the MPLAB Harmony TCP API to create a TCP/IP echo server on port 9760.",
