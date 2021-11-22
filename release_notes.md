@@ -41,7 +41,6 @@ Following table provides number of peripheral library examples available for dif
     - Example overwrite MH3 generated code to get maximum performances with the product:
         - Application code is relocated at startup to be executed in RAM.
         - Cache maintenance operation is modified to execute less instructions (only one global cache maintenance for all received packets).
-    - The generated HEX file for production is not functional, the initialized data section is not exported correctly when the compiler convert the ELF to HEX. The example should be loaded to the board using the "Debug Project" button.
 
 ### Development Tools
 

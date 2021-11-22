@@ -814,8 +814,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMRH71_DFP" vendor="Microchip" version="2.4.127"/>
         <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="SAMRH71_DFP" vendor="Microchip" version="2.4.127"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -1006,6 +1006,7 @@
         <property key="save-temps" value="false"/>
         <property key="stack-smashing" value=""/>
         <property key="wpo-lto" value="false"/>
+        <appendMe value="-Wl,--no-data-init"/>
       </C32Global>
       <PICkit3PlatformTool>
         <property key="ADC 1" value="true"/>
