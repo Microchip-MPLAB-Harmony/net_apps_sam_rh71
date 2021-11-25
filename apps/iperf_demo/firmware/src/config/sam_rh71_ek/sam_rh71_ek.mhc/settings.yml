@@ -5,7 +5,7 @@ frameworkPath: ..\..\..
 processor: ATSAMRH71F20C
 projectName: iperf_demo_sam_rh71_ek
 settings:
-  PackageFilter: aerospace;audio;bootloader;bootloader_apps_ethernet;bootloader_apps_uart;bsp;core;crypto;csp;csp_apps_sam_e70_s70_v70_v71;csp_apps_sam_rh71;gfx;gfx_apps;motor_control;net;net_apps_sam_e70_v71;net_apps_sam_rh71;quick_docs
+  PackageFilter: bsp;core;crypto;csp;dev_packs;net;net_apps_sam_rh71
   FORCE_OPTIMIZATION: 'false'
   GENERATE_BACKUP: 'true'
   TRUSTZONE: 'false'
