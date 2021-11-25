@@ -1489,7 +1489,7 @@ files:
   physicalPath: ''
   security: NON_SECURE
   type: HEADER
-  userChecksum: 15AB6693CC2E1EE7AB845EE42A6AC762
+  userChecksum: 2CC25838AB7E214E7316F7280455B6FB
 - generatedChecksum: F0F40607A9B383B5645B27B133DB2105
   logicalPath: config/sam_rh71_ek
   name: configuration.h
