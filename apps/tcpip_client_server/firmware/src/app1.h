@@ -61,6 +61,14 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 #include "system_config.h"
 #include "system_definitions.h"
 
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+extern "C" {
+
+#endif
+// DOM-IGNORE-END
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
@@ -92,7 +100,6 @@ typedef enum
 } APP1_STATES;
 
 
-
 // *****************************************************************************
 /* Application Data
 
@@ -114,7 +121,6 @@ typedef struct
 
 } APP1_DATA;
 
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Routines
@@ -123,7 +129,6 @@ typedef struct
 /* These routines are called by drivers when certain events occur.
 */
 
-	
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -140,7 +145,7 @@ typedef struct
   Description:
     This function initializes the Harmony application.  It places the 
     application in its initial state and prepares it to run so that its 
-    APP_Tasks function can be called.
+    APP1_Tasks function can be called.
 
   Precondition:
     All other system initialization routines should be called before calling
@@ -166,7 +171,7 @@ void APP1_Initialize ( void );
 
 /*******************************************************************************
   Function:
-    void APP_Tasks1 ( void )
+    void APP1_Tasks ( void )
 
   Summary:
     MPLAB Harmony Demo application tasks function
@@ -201,8 +206,14 @@ void APP1_Initialize ( void );
 
 void APP1_Tasks( void );
 
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
+}
+#endif
+//DOM-IGNORE-END
 
 #endif /* _APP1_H */
+
 /*******************************************************************************
  End of File
  */
