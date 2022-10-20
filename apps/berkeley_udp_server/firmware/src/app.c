@@ -226,7 +226,7 @@ void APP_Tasks(void) {
                 break;
             }
 
-            SYS_CONSOLE_PRINT("Recieved '%s' size %d\r\n", AppBuffer, i);
+            SYS_CONSOLE_PRINT("Received '%s' size %d\r\n", AppBuffer, i);
 
             sendto(appData.socket, (char *) AppBuffer, i, 0, (struct sockaddr *) &clientaddr, len);
 

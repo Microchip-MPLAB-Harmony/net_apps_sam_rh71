@@ -1,4 +1,4 @@
-<config configName="sam_rh71_ek" projectName="berkeley_udp_server_sam_rh71_ek" configVersion="1.1" device="ATSAMRH71F20C" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.3.3">
+<config configName="sam_rh71_ek" projectName="berkeley_udp_server_sam_rh71_ek" configVersion="1.1" device="ATSAMRH71F20C" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.4.12">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -171,7 +171,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.0.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.1.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -186,8 +186,8 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="BASIC CONFIGURATION" name="harmonyGroupAttachments"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
   &lt;Attachments dnOrder=&quot;0&quot;&gt;
-    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;Core_SysConsole_Dependency&quot; namespace=&quot;tcpipStack&quot; targetAttachmentID=&quot;TCP/IP STACK:tcpipStack:Core_SysConsole_Dependency&quot; targetComponentID=&quot;TCP/IP STACK&quot;/&gt;
-    &lt;Attachment dnOrder=&quot;1&quot; id=&quot;NETCONFIG_MAC_Dependency&quot; namespace=&quot;tcpipNetConfig_0&quot; targetAttachmentID=&quot;drvGmac:libdrvGmac&quot; targetComponentID=&quot;DRIVER LAYER&quot;/&gt;
+    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;NETCONFIG_MAC_Dependency&quot; namespace=&quot;tcpipNetConfig_0&quot;/&gt;
+    &lt;Attachment dnOrder=&quot;1&quot; id=&quot;Core_SysConsole_Dependency&quot; namespace=&quot;tcpipStack&quot; targetAttachmentID=&quot;TCP/IP STACK:tcpipStack:Core_SysConsole_Dependency&quot; targetComponentID=&quot;TCP/IP STACK&quot;/&gt;
   &lt;/Attachments&gt;
 &lt;/Attachments&gt;
 </value>
@@ -195,15 +195,6 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="DRIVER LAYER" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>TCP/IP STACK</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="DRIVER LAYER" name="harmonyGroupAttachments"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
-  &lt;Attachments dnOrder=&quot;0&quot;&gt;
-    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;libdrvGmac&quot; namespace=&quot;drvGmac&quot; targetAttachmentID=&quot;tcpipNetConfig_0:NETCONFIG_MAC_Dependency&quot; targetComponentID=&quot;BASIC CONFIGURATION&quot;/&gt;
-  &lt;/Attachments&gt;
-&lt;/Attachments&gt;
-</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="!@#harmonyAttachmentState"/>
@@ -258,6 +249,7 @@
         &lt;/Pairs&gt;
       &lt;/KeyValuePairList&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
 </value>
@@ -701,6 +693,15 @@
          <value>TCP/IP STACK</value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="PRESENTATION LAYER" name="harmonyGroupAttachments"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;Attachments&gt;
+  &lt;Attachments dnOrder=&quot;0&quot;&gt;
+    &lt;Attachment dnOrder=&quot;0&quot; id=&quot;Net_Pres_Crypto_Dependency&quot; namespace=&quot;net_Pres&quot;/&gt;
+  &lt;/Attachments&gt;
+&lt;/Attachments&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="TCP/IP STACK" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
       </entry>
@@ -736,31 +737,14 @@
         &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;TRANSPORT LAYER&quot; x=&quot;200&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;NETWORK LAYER&quot;&gt;
-      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipArp&quot; x=&quot;440&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipIPv4&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipIcmp&quot; x=&quot;580&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpip_network_config&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
-      &lt;/ElementPositions&gt;
-    &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;TRANSPORT LAYER&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;TRANSPORT LAYER&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipTcp&quot; x=&quot;304&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipUdp&quot; x=&quot;460&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpip_transport_config&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;GraphSettings canvasHeight=&quot;196&quot; canvasWidth=&quot;786&quot; dnOrder=&quot;3&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;4&quot; id=&quot;BASIC CONFIGURATION&quot;&gt;
-      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipCmd&quot; x=&quot;580&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipNetConfig&quot; x=&quot;19&quot; y=&quot;20&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipStack&quot; x=&quot;400&quot; y=&quot;21&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpip_basic_config&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
-      &lt;/ElementPositions&gt;
-    &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;5&quot; id=&quot;DRIVER LAYER&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;DRIVER LAYER&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;drvExtPhyKsz8061&quot; x=&quot;21&quot; y=&quot;73&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;drvGmac&quot; x=&quot;161&quot; y=&quot;95&quot;/&gt;
@@ -768,12 +752,20 @@
         &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpip_driver_config&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;6&quot; id=&quot;PRESENTATION LAYER&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;3&quot; id=&quot;NETWORK LAYER&quot;&gt;
+      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipArp&quot; x=&quot;440&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipIPv4&quot; x=&quot;300&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipIcmp&quot; x=&quot;580&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpip_network_config&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
+      &lt;/ElementPositions&gt;
+    &lt;/ComponentGraph&gt;
+    &lt;ComponentGraph dnOrder=&quot;4&quot; id=&quot;PRESENTATION LAYER&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;net_Pres&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;7&quot; id=&quot;APPLICATION LAYER&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;5&quot; id=&quot;APPLICATION LAYER&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipAnnounce&quot; x=&quot;640&quot; y=&quot;20&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipBerkeleyApi&quot; x=&quot;30&quot; y=&quot;80&quot;/&gt;
@@ -782,7 +774,7 @@
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;tcpip_apps_config&quot; x=&quot;20&quot; y=&quot;20&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
-    &lt;ComponentGraph dnOrder=&quot;8&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;ComponentGraph dnOrder=&quot;6&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; x=&quot;25&quot; y=&quot;56&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;TCP/IP STACK&quot; x=&quot;414&quot; y=&quot;258&quot;/&gt;
@@ -799,6 +791,15 @@
         &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;tc0&quot; x=&quot;23&quot; y=&quot;150&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
+    &lt;ComponentGraph dnOrder=&quot;7&quot; id=&quot;BASIC CONFIGURATION&quot;&gt;
+      &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;tcpipCmd&quot; x=&quot;580&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;tcpipNetConfig&quot; x=&quot;19&quot; y=&quot;20&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;tcpipStack&quot; x=&quot;400&quot; y=&quot;21&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;tcpip_basic_config&quot; x=&quot;180&quot; y=&quot;20&quot;/&gt;
+      &lt;/ElementPositions&gt;
+    &lt;/ComponentGraph&gt;
+    &lt;GraphSettings canvasHeight=&quot;196&quot; canvasWidth=&quot;786&quot; dnOrder=&quot;8&quot;/&gt;
   &lt;/UserData&gt;
 &lt;/UserData&gt;
 </value>
@@ -3680,6 +3681,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -3987,6 +3989,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4000,6 +4003,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4056,6 +4060,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4069,6 +4074,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4082,6 +4088,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4122,6 +4129,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4146,6 +4154,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4159,6 +4168,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4227,6 +4237,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/flexcom1&gt;
 &lt;/flexcom1&gt;
 </value>
@@ -4324,6 +4335,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -4353,6 +4365,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/lib_wolfcrypt&gt;
 &lt;/lib_wolfcrypt&gt;
 </value>
@@ -4709,6 +4722,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/sys_time&gt;
 &lt;/sys_time&gt;
 </value>
@@ -5395,6 +5409,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/tcpipCmd&gt;
 &lt;/tcpipCmd&gt;
 </value>
@@ -5617,6 +5632,7 @@
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/tcpipStack&gt;
 &lt;/tcpipStack&gt;
 </value>
@@ -6036,7 +6052,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\exceptions.c</file>
-         <hash>8373b825c302768f52e3568c20241f4eb49c1fbb3614139e8e65ba694066141e</hash>
+         <hash>b268111879b5fa0ab2eaf79fc5d4bd1aa046c54d97805246ce08964100a70bfb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\net_pres\pres\net_pres_cert_store.c</file>
@@ -6068,7 +6084,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\flexcom.h</file>
-         <hash>491b369f7416a9c804f45f100dce9a1974e70fec102b93fc281d00ab179095cb</hash>
+         <hash>8e565a5cd5952cbea85769150572b69c27da95e8282bc68677db3fae540ec8c5</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\smtpc.h</file>
@@ -6084,7 +6100,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\libc_syscalls.c</file>
-         <hash>ff03e955db4f7bb775c7989bc2254553698f3d921e9885caac347ccd118e55d7</hash>
+         <hash>88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_c32.c</file>
@@ -6116,7 +6132,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\wdt.h</file>
-         <hash>cf53c346b173c62d6c3ae5c831aa3c86d298059256b120a85468c26d11970db8</hash>
+         <hash>4b7d69ba90be9dd3660244f2b5cf8cb995fa77435eff644c0bf7524c404982a4</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_GF2NEccMul_pb.h</file>
@@ -6124,7 +6140,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\trng.h</file>
-         <hash>bab276eba4a33475f9f72d3f671f1200f31f5185646a8b5b2097be7794976822</hash>
+         <hash>cb517323ced69c696f8fdc3b1089348d15491ce2b5eb7585dca1b944646a4cba</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_ZpEccMul_pb.h</file>
@@ -6148,11 +6164,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\ipv4_private.h</file>
-         <hash>a3d97439130503608cb09cb559fdd8cb3e1cdfb508103b5569c7deb5b54ef808</hash>
+         <hash>c3d6d368ccd35c2836cdcb9d85226c16fc4a07709e92a6f4400110552e2771de</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom0.h</file>
-         <hash>5eb595aa9b2719a8148be5f20835490f906be53c209ece248412d32c3043ffc8</hash>
+         <hash>fd563678df0f89158d2948f3bfabc4f561bf393186f4f00920b16829e08ded87</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_Rng_pb.h</file>
@@ -6168,7 +6184,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\nmic.h</file>
-         <hash>9ac5589a870cf05b677187c3f89521775872449e15bc1823115435a97c5e9454</hash>
+         <hash>de79f2cd93d00c1fe5ec60fc715bcdf743707309fc5167ea5d684c1e24fe5cf2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\zero_conf_link_local_private.h</file>
@@ -6176,7 +6192,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\sha.h</file>
-         <hash>b53d3b251bdf9acd6a56ffb57675e5feba99ba275ef4d6ed87ab4c141f840e41</hash>
+         <hash>3e11fc857510f72a28b2817385a447455d2ecc90d5da99618045df2a9953cecb</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h</file>
@@ -6188,7 +6204,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\interrupts.h</file>
-         <hash>671a702f2677fb2688af221f85a5656dca1cc47b948ef2ffe6bc8ee53ed21f76</hash>
+         <hash>802060ffaa0b57b6c8314477e07b1b13c121398fc4b7970464c02affa3420ff2</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h</file>
@@ -6196,7 +6212,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\interrupts.c</file>
-         <hash>dab7267d37804f92dab9640b6e2ba5933f33ba169b1afe8c26fb862067eec99a</hash>
+         <hash>dcd7d49f42c9bb57c68cc2e543483cc34ca6250153adcbc71447a72e43e2ebcc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\debug\src\sys_debug.c</file>
@@ -6236,7 +6252,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\tcpip_mac.h</file>
-         <hash>016a72953f90e948baff4818b8fa8b9b0edf0f909068e6ac7b110cb6f0eb4ba5</hash>
+         <hash>c517aafb8c11f40bf01a702af6232251e3bc8ff922282c8799f3d8abad2cfb0e</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\pwdbased.c</file>
@@ -6284,15 +6300,15 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\hefc.h</file>
-         <hash>69b93abc220b3a2c163b460a4ab6a46a1bbbc7b50ebe714cea5551d425e15ec1</hash>
+         <hash>a6b6bcfe931033c13ce821505f00003a40914d82ff64f811ed5c42e8a00c60d4</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom1.h</file>
-         <hash>79b8b9217fccc7716c967fdac3ec8cbb6a0d32876d8fc8e356c05b0c4e160561</hash>
+         <hash>0506d14b58bb280582a0cd93b14e3b8a0fd33eda85c4f596aeabe38a826215f2</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\hsdramc.h</file>
-         <hash>cf7a810c2bcce00d3530466acca61f65c779e8c71c1309f37442be6c90fc6300</hash>
+         <hash>00c3fa02f170257fb5d9d8e3899baaed709586b7f593f849e781d1c69d787380</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\snmp_manager.h</file>
@@ -6336,11 +6352,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\tc\plib_tc_common.h</file>
-         <hash>326ee71f910684e498569ecbcd07ffb97d18d6f72e999e99ba12d4e75316b192</hash>
+         <hash>18de4e464f8009ae88ff57f51eade38db795cae08b4a09570ef487e4e980d086</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_manager.c</file>
-         <hash>2ac7f7419789dc9a3624ab7afd8a2d09c8ea5c59d6f2c3bc0304e4d50f6dcdbb</hash>
+         <hash>1159559e437c574a27256913c02c4a242369eedde85b8957a79a30647c9d5801</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\asn.c</file>
@@ -6348,7 +6364,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\device_vectors.h</file>
-         <hash>2d5d29370d1f69f46595fd49d175b1b496e1f33d32d2c6e86632b827eec0d626</hash>
+         <hash>3686e7607b066b365ffcd37415f2383e859d42bcd4129fabfbf2a0792f1c31b8</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\cache\sys_cache.c</file>
@@ -6368,7 +6384,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\spw.h</file>
-         <hash>de5bf0b15c72c83d59e8f8348c6bee19aa892191bdc3c6ea3340ce4f098990a0</hash>
+         <hash>df919acccdb864b49ea2e9007662e317681a0554aff7f68be318e294e7a5a6c1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_notify.h</file>
@@ -6380,7 +6396,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\sfr.h</file>
-         <hash>da156a264e38ae6e53557d45ca5e86a2151fe78a04dbccbad2ee635d53103a13</hash>
+         <hash>f012120e6745a16e1a293897a153be4421aa58731976f164ed8f66db7083f2c0</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\dh.c</file>
@@ -6400,11 +6416,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\hemc.h</file>
-         <hash>d05426384199c7c188d1a9d7b6c831a5943ae8d14e2d1aaa6576647ff99a8b34</hash>
+         <hash>b054e9ac3da8d9cb8991819cd057f947eaeb1b0d0921992f877b5a8608bd02ed</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\tc1.h</file>
-         <hash>d9b112ca125d46d76663f652d82b89c2cede6ff604d0c66348693654d846080e</hash>
+         <hash>a195effcf32ae555cef81388f131bffe23d527a93e46cdcca642b009ff19b564</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\ftpc.h</file>
@@ -6424,11 +6440,11 @@
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\settings.h</file>
-         <hash>0131d22c9c73278c8123f7efcadf514e85ccb95cd61dbe7a40976de10800b2d0</hash>
+         <hash>86a92896cc09608435ffe0d78f4aa3421fb5f19a5675761070d1e9c85ad22de8</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom2.h</file>
-         <hash>130f3cd094d77d2562bbd1dba9378f8e6a5057f2bb6d24a6def791a54c6a94fb</hash>
+         <hash>722442f469fbc16eb2655dac9fbc9cbcdadfe468c9b6671e50327668d4cdc3a0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_notify.c</file>
@@ -6480,7 +6496,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\gmac\src\dynamic\_gmac_dcpt_lists.h</file>
-         <hash>028e7a9dbedc26cdb214db1d665bf6a5cb94a4dd63479fad1409b034ed00907f</hash>
+         <hash>2c7ce3e426c164d1439f1876fd0d3628a6cde73ff5306293214f9801bfd9922c</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_low_mem.c</file>
@@ -6488,7 +6504,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\fuses.h</file>
-         <hash>001f7bc0d5a362dadb134a4d72c11c58db589ef3076b16c0fc8556ee22d45892</hash>
+         <hash>8f682d48787e38f110eafc69545fe0bb7f38c9ee3c799f367d4c6b11b20fdcb4</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\tcpip_heap.h</file>
@@ -6496,7 +6512,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\ftp_private.h</file>
-         <hash>ce44f931cbdd4e2a95e2482c56f95c13560364ac2a380ab99fcd55e89b3b3398</hash>
+         <hash>41a8b196b82fe5d660f349010fbe6661e5d5d9297afdcee3bbe4dd231ffb0876</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\blake2b.c</file>
@@ -6524,7 +6540,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\tc\plib_tc0.c</file>
-         <hash>8421a8a5dd5386f4e9f3abcce28f1acbdf1717b2b9becf6e77dbe3ef3880dd42</hash>
+         <hash>5285749cf1f249c92d7ee8707fffdaeb16dc2690b0517cdd6f3c184a682d8283</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\blake2s.c</file>
@@ -6544,11 +6560,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_manager_control.h</file>
-         <hash>67049612c82158d3ee62db2267ea8c829a4d50f2dc4001a04dfc21e0dd9f5452</hash>
+         <hash>87b88b3cda8ff015aaf63432223c11c7d62cd45d39fcaf50cdb94ca2cc0feb90</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\tc0.h</file>
-         <hash>d9f87e386c335a5dfef6c35770403005b194d14af18bd5329f756f5bf9816fbe</hash>
+         <hash>8c43ce967ad86238e30899156ffde675fe0cf408371a7f8f317bb1637668aa6f</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\hash.h</file>
@@ -6560,7 +6576,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom3.h</file>
-         <hash>1301e1943b825b4a047fff76a77cbec6224f7c2de56d535c4b03f61aa94237c6</hash>
+         <hash>25a23588627aa1640e60023e833037483e0e04df54f61748934c37a4105df406</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_GF2NEccAdd_pb.h</file>
@@ -6576,7 +6592,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\tc.h</file>
-         <hash>124cf18b45063a7f3a46635fe764e54382b918967fc5d894287af38bca3a2bf2</hash>
+         <hash>38b23d8a7411eddc490354dcd3dcf237cf64439082b827ad228fec5ec2db5385</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\memory.c</file>
@@ -6588,7 +6604,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\supc.h</file>
-         <hash>6cfddccd43f78655db3994df1de93d62160c23b68666665c705f8ee6cd693f0e</hash>
+         <hash>80f6633b9912698afbd3988104c823fb1fb0ac38abf8f484f3ceee2833615a67</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_rsa_pukcl.h</file>
@@ -6616,7 +6632,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\startup_xc32.c</file>
-         <hash>20f3cb8663866721939d02b374dbb3073b36675ad87d2dd170ffc7137bd57f1f</hash>
+         <hash>36bdd3b1882b5d5848c1684bc91e0669e6e158fdfd47aec3e108a75e223cdebc</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\des3.c</file>
@@ -6624,7 +6640,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\sfr.h</file>
-         <hash>b5943ee1bc3c6402be936f71bc0b5404939e04289cb77f21365e71f46c458d66</hash>
+         <hash>659bb8211f663ee167b0d37df32304ef29100a87fe91f333a390f80c03af3124</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\port\pic32\crypt_rng_u2242.c</file>
@@ -6644,7 +6660,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\ethphy\src\dynamic\drv_ethphy.c</file>
-         <hash>43bf8573e931964f69bbffb7f60d26a409a71d60a4ce6f92df860f82c6b9f080</hash>
+         <hash>73b08390342c8c1543388854c6c7dec6197575de83e55ed7e8a533e1b032787e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcp_private.h</file>
@@ -6656,7 +6672,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\arp.h</file>
-         <hash>f36470195390b76b01dde07a13e8fe55e607a724ace803243b2b77eb1f379e52</hash>
+         <hash>6ae66cd429f88b2f1c618a280b8b1ab3842825041af987a6f0415209a4d0d82b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\int\sys_int_mapping.h</file>
@@ -6680,7 +6696,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom4.h</file>
-         <hash>45d0e51971beddf14e3a0e95b8dd9104cb32556b9bd2bad8286d156f4a21b677</hash>
+         <hash>71a56b84d79e9525d27625696ca3443466c877de68c3b36f0ae959a82a09e169</hash>
       </entry>
       <entry>
          <file>..\src\app.c</file>
@@ -6704,7 +6720,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\pmc.h</file>
-         <hash>408ff4b4793c3c70a2b40a1ed48331152b339ff44031a7bb5e40e727f010d025</hash>
+         <hash>5dbdf6f49aad8115bb4c255db00d017c78fa1c81e1e4bc42f561d3c3dc9c86af</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_wolfcryptcb.h</file>
@@ -6712,7 +6728,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\matrix0.h</file>
-         <hash>a9b9f5755c2d9e15dff78937a80541990305deff67504f34b154295c1625a221</hash>
+         <hash>aeafdaf1671d592856b2d20ee51e82b311da8c646d3ce3ff26a46e6c9862e5d6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\smtpc_private.h</file>
@@ -6724,7 +6740,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\net_pres\pres\src\net_pres.c</file>
-         <hash>fb9752cc44b8339175def832ea2cdb8c4ccb2b17983d32fe7a7057b7d45609ce</hash>
+         <hash>9d12c8e4f2584ad099f86d7f62ebedb4c4ec60481e8b21b478c0717a5b5deb16</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\idea.h</file>
@@ -6740,11 +6756,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\rstc.h</file>
-         <hash>f3f821cd36752c6719dfc189a8ea9cad5a9a9a61bc3668829dbf2f5b610ed521</hash>
+         <hash>5e53ba14682bd5c3b934dfc3f8ec164cc7fc540a332c70c259964ee3fa010978</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\pio.h</file>
-         <hash>d196f04db3392000636f451531ff7b056ed7371a4f4eac89cfe53e22e5c76294</hash>
+         <hash>4468ac5e1fc9ff687ac2ae6bf3189870fc9221a253cd750e30dda61b70d5b975</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\net_pres\pres\net_pres_enc_glue.c</file>
@@ -6752,7 +6768,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\qspi.h</file>
-         <hash>ded35a734be83a11f6f4575bca325855e4e27a00a41ab86a0a370567c916c9d2</hash>
+         <hash>aeb5d6043a56401c3cc85e80d2ca7c0da078cbee4e80bc7352756f53c00b8008</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\net_pres\pres\net_pres_enc_glue.h</file>
@@ -6772,7 +6788,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\mcan.h</file>
-         <hash>fef86634569e48df5190c5d80e72dda229a195a5e5e00191e151761fc29142f4</hash>
+         <hash>08ba352b1d114c2a9e44e56fd7c13cc46ac8d273c893f926e12174ce0669c57a</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\chacha.c</file>
@@ -6784,11 +6800,15 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom5.h</file>
-         <hash>ccd81ddcd67f9637f70c7d33354138a6e347ae1a63dc34861a28e69044b5705e</hash>
+         <hash>79cf829395bcd22acb319f961fbf66012d47e65847d85111cf6b49d731a99449</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\ipv4.c</file>
-         <hash>445eb07eab9aed995ea8a022d22d1b31b8b9a1492da22d54abb6fc36aa36c660</hash>
+         <hash>584d4645ee0e3ee479e23ec48ae3399af38edb9f6f57b42ca3e8cea33ef3c619</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_rh71_ek\library\tcpip\src\dhcp_server_manager.h</file>
+         <hash>461db7f0b8c8a501769971a2ec777a8b83693149aee28b02c2e1d9096ea200bb</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_c64.c</file>
@@ -6824,7 +6844,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\nvic\plib_nvic.c</file>
-         <hash>eeedd9d654f94a7f09c7734201ee3ade067cd85ac69614b95d1a2052de4944cb</hash>
+         <hash>bf317ce57e88c4dae1fb0ab2159070f262a88bc9a1e85d6fbd9bcfd18fb7c71d</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_aes_hw.h</file>
@@ -6836,7 +6856,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\hsdramc.h</file>
-         <hash>d93dadc40543c0b72abad3dff496b9d333cd7a018f259c6b31819df249da2e06</hash>
+         <hash>6c8053cbd235f9bcb43381872bc5ddf0dd7720feeb697414d447265dc7f4763d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\dhcp_manager.h</file>
@@ -6844,7 +6864,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\gmac\src\dynamic\drv_gmac_lib.h</file>
-         <hash>8361e57615b38fcef65c2335fcd6a3345aded2f98fa459d4c1be3b8939927e5d</hash>
+         <hash>66cd41f1c0dece24ced4bb84881de32c873d92e16f30bc4afbead9e8ea721163</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\ipv4.h</file>
@@ -6868,7 +6888,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\mcan0.h</file>
-         <hash>01a55edb239157ee68c65311d44341838787256f843a3c2c162b0af693462cae</hash>
+         <hash>3dd6dabe05c6b83203fe27bcf98e79dd4d74cd0cd33af63e620026070146659d</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\sha3.h</file>
@@ -6892,7 +6912,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\gmac\src\dynamic\drv_gmac.c</file>
-         <hash>2ad6e6c07ded63cec60565f2e7e822669557494f432d618b8d454f004ec8b35a</hash>
+         <hash>ad0ce587a88465143ebcb9bffa21af3111df570f7d1f21566ba08588d01293bd</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\driver.h</file>
@@ -6904,7 +6924,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\chipid.h</file>
-         <hash>9eef697933916caf0576b66da021b2132a6e8121e88c538711ab1cb57668b5ae</hash>
+         <hash>29c1da5bc1aa0683882d7bad47d56b0379bcc643ca900c52d6dbc65d39af747f</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\port\pic32\crypt_ecc_ba414e.c</file>
@@ -6912,11 +6932,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\pwm1.h</file>
-         <hash>4d8fd7a0391ea19340433c30fabe4865e2b3ecbc083ee768f3c07a01a640f50a</hash>
+         <hash>eb5087d94d059f3fb8d710baca496dc6ee43efbe5b1230f345df65b132768179</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\udp.c</file>
-         <hash>1d4490188a6b554716a2f727c46a34a8977f26b9ce3bf0d41765a6c0de59d278</hash>
+         <hash>f2f3ce399aaee365a5907bd607caa3ee46f73ef55e6fad9f04ecc670e83268e6</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_tdes_sam6150.h</file>
@@ -6940,7 +6960,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom6.h</file>
-         <hash>1f457c48c3038f0ac2052fad1cdccd25b45e7ab68c58b06feb57152a3417e178</hash>
+         <hash>99f06c865e752d3f887cb7883693ed8545fbc23650d228651766f69c2496fea2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\cryptocb.h</file>
@@ -6960,11 +6980,15 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\time\src\sys_time.c</file>
-         <hash>ddec1a83e32b63552ae72f884dc849e376b60d411669554f7ec492fff180662f</hash>
+         <hash>b722ac0c5d955d289bd906609ab6f302342166c5ba66f87b30cac17ac6bfdcd9</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\gmac.h</file>
-         <hash>dd8d95a466345610b162d49c700f00660d4ec5823b1a84f6b1147ccdd95d7879</hash>
+         <hash>fef163e9af2c7ad14f846a3ddc759103585d10df4faae19175891e36a662dc86</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_rh71_ek\library\tcpip\dhcp_server.h</file>
+         <hash>51e645d3ded493317ac36d913b5534bd60a59d705d4310eced80c7be89c1eeff</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\zero_conf_link_local.h</file>
@@ -6988,7 +7012,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\tcmecc.h</file>
-         <hash>17de5e0d4f3bfab2c3a22008fb078e83daf26bf768d8c2f44b7e41f264f48329</hash>
+         <hash>26c5cb1d1c5b37c57c95f165bbd1deaee5974b8204aea19f36ecdd97c4c87195</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\net_pres\pres\net_pres.h</file>
@@ -7004,7 +7028,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\mcan1.h</file>
-         <hash>a3cd571ebd97fcd81894905303c8903b32e6c95f9902a60f745704957db85748</hash>
+         <hash>c2558dd00ee4b1a96f09b70d82712aa78b70636510f5a275de4144d4339362bc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\console\src\sys_console_uart_definitions.h</file>
@@ -7016,7 +7040,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\console\sys_console.h</file>
-         <hash>f4a1d6e28347f9d6dcc091dc65032ef01f9b0651bc710001ba4b2eb4af29f4bb</hash>
+         <hash>e8a97986345fb2c80389834b113384eba523837ee43f7798d9b56be630a6e7b3</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_sha512_hw.h</file>
@@ -7036,7 +7060,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_heap_internal.c</file>
-         <hash>dae8d714995899c343e3ccf3d1048d13ea9210b6806e5e4ab2bb8ec26d12e137</hash>
+         <hash>d2889ab1b488c6fd010c9bceff88ac49dee94b7671c269d784b8f70b966864b2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_FastCopy_pb.h</file>
@@ -7052,7 +7076,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\pwm0.h</file>
-         <hash>61fca13bf85f93666424e04fc89c342678a58529859a1b21804020128dd3cf4f</hash>
+         <hash>acb2a4779eb0b3719e1abea4b2150db2ce3f620244ec2d9790ea4a2c98c02ba6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tftpc_private.h</file>
@@ -7068,7 +7092,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\hsmc.h</file>
-         <hash>702bb0e229827ced5656991f3530b3237044ff01e9c5e518a0c071bf988a2cfc</hash>
+         <hash>7b12c19042ca0a1583bd111f85d8c5812408cffdfd243cf1dfc68878e9d7e841</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\http_manager.h</file>
@@ -7076,7 +7100,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\oahash.c</file>
-         <hash>5651aa16152a6548ce9bb8e1a0dd914ade8cfa27b9acf72a7453744c6f783598</hash>
+         <hash>f8e65ee4421a5405e219e05f5a5ab875ab948b51e9aa035566b11e1060941af6</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_commands_manager.h</file>
@@ -7092,7 +7116,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\rswdt.h</file>
-         <hash>2f9ee9a03f99af50cb963971540e83fed6394faeb1d8ca0fce29f018603e8a1e</hash>
+         <hash>7a9b3e94f76f0facbd54b23abb2786217b85172ea6754dd60371d2abfef8af87</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\fe_448.c</file>
@@ -7100,7 +7124,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom7.h</file>
-         <hash>d2d744d31148060e0020c089799257ae486209f715851658754ae7789b722008</hash>
+         <hash>2ef2b5b4bd423f84a08260e0f243d1e661f01e2f4ded4ef4ee111123df63e33f</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\tcpip_commands.h</file>
@@ -7108,11 +7132,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\oahash.h</file>
-         <hash>14cd46dce77ffceacb33fbef8ed5dc96b8e5bd24fae6d72d5b7dddf5c2b3fa8f</hash>
+         <hash>75929a00c86e29359dcb5452f9dc184fa1c714906b6244c79982f911063b8848</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\pio.h</file>
-         <hash>10c5ba60090fa3f2423b8773cb1aa5a428a71a85007203400f4c8ba0c7372897</hash>
+         <hash>2a163e2a0b63dcc20ea1a10addf7fba10b3b2bc7e75fd1287f074d6b23cc7dca</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ge_operations.c</file>
@@ -7124,7 +7148,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\flexramecc.h</file>
-         <hash>057bd1c255e3c9b46fe817c22cc19934580539abbfca735c9482f9bc4a78ae00</hash>
+         <hash>1b3350447dd6afb456458f47b93f534ade011fc2cd64a9f26136a9334f827098</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\mpi_superclass.h</file>
@@ -7136,7 +7160,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\pmc.h</file>
-         <hash>3e0e584f00bb2f66965acb533844c8b874bad2d74234cee1b5954a0aa5bd92d0</hash>
+         <hash>29d260c57a5f61e8b52328dab5234c22a3faffda27104f51082b045906305177</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\curve25519.h</file>
@@ -7144,7 +7168,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\chipid.h</file>
-         <hash>78358a8331e18a93f74294196a4425439dc470cfa9d9e0f603e6348afa301b80</hash>
+         <hash>8fb5059d3bdd8bf9c405aa4052287e2c38a00733572bc1d113f8bda7849c5a1b</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\igmp_manager.h</file>
@@ -7152,11 +7176,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\sha.h</file>
-         <hash>e67f8b3cde341137989a0338dc3b1b5f2c52985f6796031cf82918f91e1423b8</hash>
+         <hash>3748db2f22e75f954b32566a5691480d51e82161043b53ef6fd18b575fe6f829</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\dns.c</file>
-         <hash>8321c27e58d85cbc9d806acfdfb4c6e081644b6d6eee616e56a37e906ed37782</hash>
+         <hash>49e3596965c281bbbd7a9818b6e3e3b2b812c6627ae77529490ef18f6776ef1a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\gmac\drv_gmac.h</file>
@@ -7208,7 +7232,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\hefc.h</file>
-         <hash>7aa8618936266781521d9ccb03b560a6751963b6ad0cf0c773d204acef15a90e</hash>
+         <hash>0a5c90f55c02739def10874495c48dd694356d0cd4416f5a965d6a263e51c64a</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\pkcs11.h</file>
@@ -7248,7 +7272,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\arp.c</file>
-         <hash>5338def807918e048842e9e78eb62fc7868f7a3662059931e5b6517d578b3707</hash>
+         <hash>e78a4e6b26d1f2cf65a8a0cae85ea725ee9f57d83b4f23c9ddc4dfbb2601715d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\lldp_manager.h</file>
@@ -7256,7 +7280,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\rswdt.h</file>
-         <hash>1c2794c2c56aabd84600e9cd3fe8afaa473b59f7148719ef312fa651bc1beb0d</hash>
+         <hash>d1530853938c3646c02b565eeca826199ce00e2a28e638cdb869e011b2eab576</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\md2.h</file>
@@ -7264,7 +7288,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\tcmecc.h</file>
-         <hash>e8444df3aee3110072aac8a37ffa6b5539abd8b202a155abffb4a2ea202779e3</hash>
+         <hash>21742e4c2c9e817ffcbef0b80637548a269338db8c34648b5a81797d101378dc</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\device_cache.h</file>
@@ -7272,19 +7296,19 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\pio\plib_pio.h</file>
-         <hash>1dadc14edc2f3529ac4ef9d674919a06af4e4e2fc046b32abc5c3a7836f589e9</hash>
+         <hash>3f5493fb1220c88044683909a4ae31ff2e2cce9ae292a8f4e0bd0b4d73098796</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\spw.h</file>
-         <hash>a2723fe21f05761066dd974be529ee013ebb9e169b9f09f994cf7077a1883663</hash>
+         <hash>af7c83ea3e13f80ada6287c36d1e40deaedf1db15a2a17bd2b7edd2311d62dda</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\pio\plib_pio.c</file>
-         <hash>940a5d0db7189844675f15f0257a3b19d62a2f13e30be5ef0df3093e1b3288a3</hash>
+         <hash>88f102c9366e98659375e7c9e22753fcb2810cd8fc612cc95a070b637079f3ff</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom8.h</file>
-         <hash>4db72f49a95159b6ded3ee861239bf93d0165670808ea0ea197e931d454ecdd3</hash>
+         <hash>aac11431d91d632b11b1d5938709e0f52d76cdacb6c6e7c68ebe51d70a4bfd31</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\arp_manager.h</file>
@@ -7308,7 +7332,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\trng.h</file>
-         <hash>3b1c012e45888c16e0e3c4911cf317cd686ec667d54ce15d894ff15a1a1e91b7</hash>
+         <hash>a8b5ec213deb8c456f188cb5a1051359c5c875067bc137e6ee9a412895e24639</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\miim\drv_miim.h</file>
@@ -7324,7 +7348,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\xdmac.h</file>
-         <hash>def2ee801cb8407b04567c88efee46fb2d3aa77485b0e6d96395bd6d36ea8e94</hash>
+         <hash>a0e93565163e7ba43180e616229537fd2a0e8f1c90d4ba3864d1232283ba1b98</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\icmpv6_manager.h</file>
@@ -7360,7 +7384,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\wdt.h</file>
-         <hash>41cac47fa70df92f38ad6bb387c2c528b13d29d8495f03ba41bfa4b87b7f3c9f</hash>
+         <hash>6c34d27ca2e09f311c9238270a20635aa9ff68f5efb7aac7e68c9e6b4095d005</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\cmac.h</file>
@@ -7388,7 +7412,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\ATSAMRH71F20C.ld</file>
-         <hash>677ff420ed1601e58c02503ccc41f14e418360f082494a22835e5651a53fa099</hash>
+         <hash>22621d479e36bc38dea2d9efa0eda451cbd7c6d636f59407c42e38555e319142</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\tftpc.h</file>
@@ -7408,11 +7432,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\rtt.h</file>
-         <hash>d0283116d7a698a9f6641fd3c36a80d5ccb1ed1c0c6482f70de0ad4405376bd8</hash>
+         <hash>b9d263d3f502d873e2eff7a4333b49660b38182aafc988de38b06818cbec040f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexcom9.h</file>
-         <hash>22695ff0faf3f3b5a36a88de5e75fb657cae62f3b322567ef835afa2f279e7f5</hash>
+         <hash>e461e08e64278e5ed2a9f189b3916c35686da5cec5131fb70aa7d73f9fbd1fc2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\port\pic32\crypt_sha384_sam6156.c</file>
@@ -7428,11 +7452,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\miim\src\dynamic\drv_miim.c</file>
-         <hash>4440e13a1e4013f08125cb7a8c06ac7ee183182dbdd9f6f56e2a58f16fa9af17</hash>
+         <hash>ba90c5f8c1ddf6df33ad4cdad300d8dc5a6fdb25e92f142634b7139c55eadf00</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\fuses.h</file>
-         <hash>a99e2c3c2e6017834baba0ebe5e304fe8d926e804dbaacd2a39a90f21f5155a2</hash>
+         <hash>14cb984acde52902fe7c1f12ca667f5723cae3b36042ec37744d1682bd977df3</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_pukcl_functions.h</file>
@@ -7448,7 +7472,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\icmp.h</file>
-         <hash>9d8f67ac45146f25b1d7ddbfcb0f660a0d69fa3b569d198974808dd71e34dde6</hash>
+         <hash>c41fdfc0036ec543e8d804ea684d0426029947a5853d1530234c1cbeafbb3ac2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\tcpip_manager.h</file>
@@ -7484,7 +7508,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\pio\samrh71f20c.h</file>
-         <hash>a36daa53af6a9e6a210e8d4e78ce20610c8a9cc887c45a2d84c1106fce6ec3f6</hash>
+         <hash>0a3ad996e96a021588ce018911c3dfd3e23622b51b39bc3da8770e735f444379</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_Rc_pb.h</file>
@@ -7512,7 +7536,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\time\src\sys_time_local.h</file>
-         <hash>a761ad68ce0cbac8c326bd17e54cc01d10324ed8d5e120ef092856a21604b6a2</hash>
+         <hash>d3ef06b59d9a89efe9e8eb54fcf3b75120d56156cc21f6847ca4f9e902eb7c9d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\sys_time_h2_adapter.c</file>
@@ -7572,7 +7596,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\command\sys_command.h</file>
-         <hash>c29ae3a018b8513dbdb95ee26b477c52d076ebe3c5a1eb168d3f101170e53077</hash>
+         <hash>8d8b4c4f428355afecc0771ff799785869386e7cfb079e327773628226ee2e2d</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\osal\osal_impl_basic.h</file>
@@ -7584,7 +7608,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\flexcom\usart\plib_flexcom_usart_local.h</file>
-         <hash>c432009c621be4cdbd65569d0c1cee84c8ee5c16d018fdc06b4e178c02718852</hash>
+         <hash>ab93fd45b0e4b8313a701921da099d2bdf35839d7479149fda62987c9773e075</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\udp_manager.h</file>
@@ -7596,11 +7620,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\debug\sys_debug.h</file>
-         <hash>c17a266d85e3ed1dd692a96184193c0ebfea1099f6698ca073f82418d92d8b53</hash>
+         <hash>222cdc284bd651e83188b9641cc57c133cf86563dbeb5d5523766d4a36087165</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\icm.h</file>
-         <hash>a83368880ba01fee0a66e4b8ae767bb0f3851abf6b07e6a724998cdd7788e230</hash>
+         <hash>599311c8ec2ece22d6553a37e61598e7bb6d63908c0a0af45e17a3a5f50f099c</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_Fmult_pb.h</file>
@@ -7608,11 +7632,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\icmp.c</file>
-         <hash>cf009623bc221603c2058e167b7144c279e0d60b75350eae6b73f41c02a7027e</hash>
+         <hash>727d020f0077fe0b965a9627c7fb21afc146c807e60889a9bd7bdbfe8fc8525f</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\qspi.h</file>
-         <hash>c5993a2bcb5a187b0e2ed5cc93608e71ba1c0bf826e2a1378b6494cdfc452c94</hash>
+         <hash>cc5da154120f6f41becd196a3add38e4ecf415167004b29d68a181248838145d</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\hmac.c</file>
@@ -7636,7 +7660,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\nmic.h</file>
-         <hash>2c7d5148fb1599d19437cd476c6fff165e996a34bfc06e347492852aa75f768e</hash>
+         <hash>f64602e748c7dbeb5caf1bbffb562ed2caafc427cdf40624b722254e91f6db02</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\driver_common.h</file>
@@ -7660,7 +7684,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\initialization.c</file>
-         <hash>86892bda293e040038d9ba49b3471b45dfedd6bce68d5e71c11d1e12b05da6d8</hash>
+         <hash>edba779797ff4c8e514a22d29850d9255acbfecff7b340152109bb1454238a13</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\ftp_manager.h</file>
@@ -7668,7 +7692,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\command\src\sys_command.c</file>
-         <hash>d1e9a128db653a24ba44efacb812861f6b0db9e444952f421cdc202a4db9ff7e</hash>
+         <hash>f6ffa260b5a6f1e0134c8845c405d0e21dcdc5fd02e95dcc7a4a5fccf1cb23ae</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\dsa.c</file>
@@ -7696,7 +7720,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\dhcp_private.h</file>
-         <hash>b91eda5e97999b9b0c12d509616899fbbd4816dd06311b96cf7fbb90ea6db8ca</hash>
+         <hash>91ffa8cd07a9564bc1d05744dd8779dede435bd4036d3ab4a905cd5ca17c7cf8</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\port\pic32\crypt_wolfcryptcb.c</file>
@@ -7708,7 +7732,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\icm.h</file>
-         <hash>49f4d72ee1e43070d27d6c9c4d2c337eb90144cc2c8ce9ca2402472348981e6a</hash>
+         <hash>6644bfa3d30718074251a7fa3542c477e7c9c891fbe34990cc6da75854c0c561</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\rabbit.h</file>
@@ -7740,7 +7764,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\gmac.h</file>
-         <hash>40ea47d77f625234902aad12a991c342939103ea878bc89812b23f36d14970c4</hash>
+         <hash>590a693b75903697e1d8a5dac7d0ccb9473039e087233770dee3d7a24a37afb1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_mac_bridge_private.h</file>
@@ -7748,23 +7772,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\sys_random_h2_adapter.c</file>
-         <hash>ec02569fe86d160b78280f0113cbb50eb58d818a33a94fffa53960c8d152ac05</hash>
+         <hash>6e84293cf74f2640b5b5af0ee0b6eaedf2a246fd7e233cf71385f468a45c901e</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\supc.h</file>
-         <hash>7ecefe6852e1a04fbeae1e0cde671d786e79ad4946f81dd24c67d31baaaaeb97</hash>
+         <hash>c3ee3a2658a05082dce60c8bedef909ef34109f573056433ffb4eca01579036a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\system\sys_random_h2_adapter.h</file>
-         <hash>f04b3baf0f66dde3c4b217b331a2ad50de6122be786b44cb49a92b4b840c4594</hash>
+         <hash>f12e175e7261158adacd99331c8e3252491e309658e90aec6adb0ffeff5f5587</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\dns.h</file>
-         <hash>0a5b8a799412808cc56a78eb8aa644af8f9dda61a5d403e198af9e9697f31999</hash>
+         <hash>180ee8622056b0db299e51437f55aaa760949a9c700feefc22b91aa69cd20c84</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\xdmac.h</file>
-         <hash>5210c105eb6a4e1fdad2acab44484a80e9d4e3088c3b08b17af24b299374af0c</hash>
+         <hash>6a2b564084ab29d74a8e26487aeee5b912e43f58dee65e07950efdca07a9e8c0</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\net_pres\pres\net_pres_certstore.h</file>
@@ -7776,7 +7800,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\tc3.h</file>
-         <hash>552cbe0e1736feac2d485e70e65a2f00136011fff4753cee95b7a0163e5dbc13</hash>
+         <hash>15040c79d30367e372d325d35b62671f6e63685c49d06f1227a59c9006c6ec75</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_rh71_ek\pin_configurations.csv</file>
+         <hash>1390b0a6819c5879378e5b4d394b861ba05bd27769180576c16dacc865d8b6b1</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\dnss_manager.h</file>
@@ -7788,7 +7816,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\matrix.h</file>
-         <hash>d1eea0fac6a27c7cc8e6d558ae1b0de43e8b0c03ff137ecb1b96629c1a6ea9b0</hash>
+         <hash>37247c7d7fbcd54b2340a1961fc95a8f2ae83451055b49b374259633791357a2</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_armthumb.c</file>
@@ -7800,7 +7828,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\stdio\xc32_monitor.c</file>
-         <hash>26e5749db654ed433fd94f6c732ef8600d0cbf5196493374cf111877c02b694e</hash>
+         <hash>858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\ge_low_mem.c</file>
@@ -7816,7 +7844,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\udp_private.h</file>
-         <hash>2d8965cee12c8c61365f8e3133dc2ebba2184950f476d01553cf27dda13cdf48</hash>
+         <hash>5473b909c7f844b5362b8651704c651a5064e4df66f1cbf1ba67b8f727717f2e</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\sp_x86_64.c</file>
@@ -7836,11 +7864,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\udp.h</file>
-         <hash>f891d19968374ae333734d32cafe0241cecac1ae31674caf3112d365d43cdc8d</hash>
+         <hash>6d1fa5692af3cef0125eb5581e1e7cb555ea6de98a82827e070b164e0c13ab76</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\dhcp.c</file>
-         <hash>2f523116d6e2f9e86c3481394df36907c4720b4f662621810ef775b9e2156a60</hash>
+         <hash>45dbcf12064725af8225654619727d41b23e5fe632d2912bf31073f2c9cd890d</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\srp.c</file>
@@ -7848,7 +7876,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\berkeley_api.c</file>
-         <hash>489763146faceaa5ed3f36184737c49db7795e782875277979734880c7ca00ea</hash>
+         <hash>9d9c94b06f7330865e75e80cea5124bc47bbadbe5120ff61503edcff501d91a9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\telnet.h</file>
@@ -7868,7 +7896,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\flexcom\usart\plib_flexcom1_usart.h</file>
-         <hash>92c34c8a8fd3533144f1c0797af7cb3deee5615a901942a96038f20db914f64e</hash>
+         <hash>05c44553a81a5d61c67b05d153842f4a979914275ef0b49d8d7010c49998efca</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\crypt_tdes_hw.h</file>
@@ -7880,7 +7908,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\flexcom\usart\plib_flexcom1_usart.c</file>
-         <hash>365da61692130b650bd606ea8f4db3631218785fc6ac4a7188e337cb13f0c0d3</hash>
+         <hash>5e76878d6d1c018c881444c83b77c210db48186ba15d7ed0f082ecd3ff757553</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\port\pic32\CryptoLib_GF2NEcDsa_pb.h</file>
@@ -7920,7 +7948,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\tc2.h</file>
-         <hash>c1a0a175fb5d78157493d4e09f8f1d876c6ded3f0a60642638ddfb293f908065</hash>
+         <hash>dc40015c22a9333748be0940d5ec177479b8f97a2ac2de5bd84df28e97381dea</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\cryptocb.c</file>
@@ -7928,7 +7956,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\flexramecc.h</file>
-         <hash>75873dfdcd1e7c71b9d503e99e4e12f43f21b2e5029e46b4911b53c5f6df9e36</hash>
+         <hash>5348ccf6e282e8ad9ae085f5a60c695bc100cc56431cf210dc0e9755b81fa5bb</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\net_pres\pres\net_pres_socketapiconversion.h</file>
@@ -7936,7 +7964,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\hsmc.h</file>
-         <hash>2f6f7620824c2d829af40946017b16e86e97b9a47597d8e85ba0fec591d245a0</hash>
+         <hash>7b5f5317ef302b45c28e6a09d741b85204eab257e36c4b3197957080eefe12e6</hash>
       </entry>
       <entry>
          <file>..\src\main.c</file>
@@ -7948,19 +7976,23 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\configuration.h</file>
-         <hash>dbde15c699e64a1861e499a4133e5eaa19f503a3787cf92e25a8bdf50af39636</hash>
+         <hash>0e179d0add42e8ab61762edbe5b5bd258eb25af77e026e38512d516e9fff858b</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\rtc.h</file>
-         <hash>f5f1b9dae8c9ee35eed52a6a4fa3b2d017e161fb641a8d87587139b5e7225ccf</hash>
+         <hash>8331c75f7300c8ae210c26d637ee4aeb0af5dc3247d4d78c7609879593ad0db9</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_helpers.c</file>
-         <hash>41b5e3b503aafc4cb0aa78acd06cb780c8ce61f339e510f6d7a7de80616fce0e</hash>
+         <hash>4db07f17febbc0b56170c064e15966a696792f6ccb08aad4fb42f2fbc7640154</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\pwm.h</file>
-         <hash>bb81373940773186ea5de6c849468451319e1439c8fc5afeaa1b91fa978b6527</hash>
+         <hash>bd151d544f56d896e5ee8aad9642791a64daece0a2739fc77f5caf2c0f8d7f81</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\sam_rh71_ek\library\tcpip\src\dhcp_server_private.h</file>
+         <hash>7e85322b5eadd0a1eaca264334cbe2ce041df42bbde4fa210cd4f6c4fd4585f6</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\dh.h</file>
@@ -7972,7 +8004,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tcpip_commands.c</file>
-         <hash>a318c2c82ae38260022a0a90f3f742fdf09ba0db470090b958a39b593b456ad3</hash>
+         <hash>1712afdb545445153a481c3c5e96bf6527df66e840e525800eff45825efdf05e</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\hash_fnv.h</file>
@@ -7992,7 +8024,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\rstc.h</file>
-         <hash>ba551ae7770656c03f43140bff7f1ddc1cd943220570e1905fbe2ad144d7182c</hash>
+         <hash>b971de80bc912a9f45641943b34e06c30c61eeb7d6268100c220629252223269</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\error.c</file>
@@ -8020,11 +8052,11 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\hemc.h</file>
-         <hash>a42155b29b5f8986a428e61a626d3b6c989618fd49983eb6b7c39c433fd211a9</hash>
+         <hash>428f51990b746b1748692d105f45cc51dafd756f1b90ab7333370a66f7710705</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\dhcp.h</file>
-         <hash>4f6af9fc08fdfd47f5551e16127028960151ea26da2c43c7b99992648a101e8a</hash>
+         <hash>30d1c8ba29e1fe380bafd1b247df7245499e023cf5cdc7c444f660703a0fdaba</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\http_net_private.h</file>
@@ -8044,7 +8076,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\samrh71f20c.h</file>
-         <hash>35ab5a65ea10fc2696363e1905c1785a59e6da55f3f58921ca4bf7f570ba84fc</hash>
+         <hash>3beade601c6b6df90951bc9a2d55f8e76071de683210475c81f5297e120161c9</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\pkcs12.c</file>
@@ -8056,7 +8088,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\matrix\plib_matrix.c</file>
-         <hash>7b3362fafbe09d7e3b161e1d987b36326e6be644a4a984cf76d42cea35da414e</hash>
+         <hash>b686299aed0fdcb873bc66d8f1702d25fbc2b1403702849caac31069ee2ae120</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\pkcs7.c</file>
@@ -8072,7 +8104,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\matrix\plib_matrix.h</file>
-         <hash>8a4aac7cb99ee3271731ce044eb867f69179cf6b03d6dba3c3691db858dcecdc</hash>
+         <hash>614d7aa46e9fbf009aa3a23a590a82d2541d6f03595a20e1409511b3e2378f87</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\tcpip_mac_bridge.h</file>
@@ -8084,11 +8116,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\mpu\plib_mpu.c</file>
-         <hash>9b43f05410f2f00d1384426c5b26717b449109bc4e49f988a169e95c3da70eeb</hash>
+         <hash>b073da1da9f5332c2c84673255b9d0fef1bc2ddeee761f2be87107904159d4ec</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\gmac\src\dynamic\drv_gmac_lib_samE7x_V7x.c</file>
-         <hash>17e0d51f7f20c956ca1fa589e6a43c88590a979e1fde0145f4200e29d2b052d7</hash>
+         <hash>f064d003873d368faa1b55c3a6b27923ad45154b1a0536146270293fece1abf2</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\driver\miim\src\dynamic\drv_miim_mapping.h</file>
@@ -8096,7 +8128,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\instance\ip1553.h</file>
-         <hash>912c1fd6c88d0e4f0ad098d3b9d9e3a6778f974b8041ccfa725d47c9f6a630ee</hash>
+         <hash>7f199a6dc5034dcad2223948a946d64d41a9141dd8497ecd18f06735477e688c</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\dhcps.h</file>
@@ -8120,11 +8152,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\berkeley_api.h</file>
-         <hash>7c7bd67361c5c73dfada1108aadd3828a606617ae246cbdfc707b6b5d1c7d680</hash>
+         <hash>872e102da2b316e0bd29c0340fd40034570d4208459773043b348070de1149c5</hash>
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\ip1553.h</file>
-         <hash>0f3cc445618542a462d9ca7bd2d4277b7f3ad806a5d2f9b0a4e6ed47165e946c</hash>
+         <hash>a8a53b23fa2c35452da6be96c70aeed3e6b7badfc46169c6bd92cc05c91bbf20</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\smtpc_manager.h</file>
@@ -8132,7 +8164,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\rtc.h</file>
-         <hash>b1524d86257b4eeeb90fb998978b9c069cfde963d6d4bf5bd80a8f678a8d7eb6</hash>
+         <hash>69711e343f62cdd1da62a8af33814b0b40befdeabebb648b1c818b4fc078c813</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\ndp_private.h</file>
@@ -8168,7 +8200,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\clk\plib_clk.c</file>
-         <hash>e6c55064e85a9a8607567a05496f67c4f96d13fbad2e9866b391ae949e24c51b</hash>
+         <hash>c6cd450d41aa1cc4d82ed4dcb1d4542dd73e7de079f776e033889025fe098521</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\ipv6_manager.h</file>
@@ -8180,11 +8212,11 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\clk\plib_clk.h</file>
-         <hash>0c761b5e11f2cb0c5818173bb889cccfb57420e314b10f74689f6c43ed108c27</hash>
+         <hash>0e259c8d2ad66189ae04de33dcc8fba9724409aa6cebf9ddc818ce9d7d3d3767</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\http_net.h</file>
-         <hash>27308a2d6103136d39c0101be76c3fa8eb40622ac3e307868e98ebf0285d98d3</hash>
+         <hash>5fdff94f9de406e711d4571e130bfa25338f6d7c5072ff168565a35bce7e7f7a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\library\tcpip\src\tftpc_manager.h</file>
@@ -8208,7 +8240,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_ek\peripheral\mpu\plib_mpu_local.h</file>
-         <hash>c7adc40e04f26e78960da6271565ea8e78705643473fd92e2079e32740ebc63f</hash>
+         <hash>d408b2136f47e1385f85f626fb0e163f413e3791c5ef080fe0f9398be20e4f4b</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\wolfevent.c</file>
@@ -8228,7 +8260,7 @@
       </entry>
       <entry>
          <file>..\src\packs\ATSAMRH71F20C_DFP\component\rtt.h</file>
-         <hash>c3e4df727d006ca0ae565d9d6ad1b184903cf3f346992d0b7b4849d7776cda2f</hash>
+         <hash>2bfa1b42c14e26b5df38e34e98f7b55362e60e8e1412e93456fd027dd6a9bab1</hash>
       </entry>
       <entry>
          <file>..\src\third_party\wolfssl\wolfssl\wolfcrypt\src\evp.c</file>
