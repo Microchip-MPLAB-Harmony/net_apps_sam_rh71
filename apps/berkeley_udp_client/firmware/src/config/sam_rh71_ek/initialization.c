@@ -625,11 +625,13 @@ const SYS_DEBUG_INIT debugInit =
 
 void SYS_Initialize ( void* data )
 {
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
   
     CLOCK_Initialize();
 
-	PIO_Initialize();
+    PIO_Initialize();
 
 
 
@@ -675,6 +677,7 @@ SYS_ASSERT(sysObj.tcpip != SYS_MODULE_OBJ_INVALID, "TCPIP_STACK_Init Failed" );
 
     NVIC_Initialize();
 
+    /* MISRAC 2012 deviation block end */
 }
 
 
