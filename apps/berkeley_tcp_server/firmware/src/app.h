@@ -57,6 +57,14 @@
 #include "configuration.h"
 #include "definitions.h"
 
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+extern "C" {
+
+#endif
+// DOM-IGNORE-END
+
 extern const uint8_t MPFS_IMAGE_DATA[];
 #define MAX_CLIENT (3)
 // *****************************************************************************
@@ -196,10 +204,22 @@ void APP_Initialize ( void );
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP_Tasks ( void );
+void APP_Tasks( void );
 
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
+}
+#endif
+//DOM-IGNORE-END
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
+}
+#endif
+//DOM-IGNORE-END
 
 #endif /* _APP_H */
+
 /*******************************************************************************
  End of File
  */
+
