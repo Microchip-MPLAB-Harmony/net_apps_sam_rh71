@@ -1,8 +1,3 @@
----
-title: Release notes
-nav_order: 99
----
-
 ![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
 ![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
@@ -16,7 +11,7 @@ Following table provides number of peripheral library examples available for dif
 
 | Development Kits  | MPLABx applications |
 |:-----------------:|:-------------------:|
-| SAM RH71 Evaluation Kit | 13 |
+| SAM RH71 Evaluation Kit | 12 |
 
 ### New Features
 
@@ -26,7 +21,6 @@ Following table provides number of peripheral library examples available for dif
     - Berkeley UDP Client
     - Berkeley UDP Server
     - Berkeley UDP Relay
-    - IPERF Demo
     - TCP Client
     - TCP Client Server
     - Client Server
@@ -37,28 +31,23 @@ Following table provides number of peripheral library examples available for dif
 
 ### Known Issues
 
-- IPERF demo:
-    - Example overwrite MH3 generated code to get maximum performances with the product:
-        - Application code is relocated at startup to be executed in RAM.
-        - Cache maintenance operation is modified to execute less instructions (only one global cache maintenance for all received packets).
-
 ### Development Tools
 
-- [MPLAB® X IDE v5.50](https://www.microchip.com/mplab/mplab-x-ide)
+- [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
 - MPLAB® X IDE plug-ins:
-  - MPLAB® Harmony Configurator (MHC) v3.8.0
-- [MPLAB® XC32 C/C++ Compiler v3.01](https://www.microchip.com/mplab/compilers)
+  - MPLAB® Code Configurator (M§CC) v5.1.17
+- [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers)
 
 ### Dependent Components
 
-* [CSP v3.10.0](https://github.com/Microchip-MPLAB-Harmony/csp/releases/tag/v3.10.0)
-* [dev_packs v3.10.0](https://github.com/Microchip-MPLAB-Harmony/dev_packs/releases/tag/v3.10.0)
-* [Core v3.10.0](https://github.com/Microchip-MPLAB-Harmony/core/releases/tag/v3.10.0)
-* [BSP v3.10.0](https://github.com/Microchip-MPLAB-Harmony/bsp/releases/tag/v3.10.0)
-* [Crypto v3.7.3](https://github.com/Microchip-MPLAB-Harmony/crypto/releases/tag/v3.7.3)
-* [Net v3.7.4](https://github.com/Microchip-MPLAB-Harmony/net/releases/tag/v3.7.4)
+* [CSP v3.13.1](https://github.com/Microchip-MPLAB-Harmony/csp/releases/tag/v3.13.1)
+* [dev_packs v3.13.1](https://github.com/Microchip-MPLAB-Harmony/dev_packs/releases/tag/v3.13.1)
+* [Core v3.11.1](https://github.com/Microchip-MPLAB-Harmony/core/releases/tag/v3.11.1)
+* [BSP v3.14.0](https://github.com/Microchip-MPLAB-Harmony/bsp/releases/tag/v3.14.0)
+* [Crypto v3.7.6](https://github.com/Microchip-MPLAB-Harmony/crypto/releases/tag/v3.7.6)
+* [Net v3.8.0](https://github.com/Microchip-MPLAB-Harmony/net/releases/tag/v3.8.0)
 * [Wolfssl v4.7.0](https://github.com/Microchip-MPLAB-Harmony/wolfssl/releases/tag/v4.7.0)
-* [CMSIS-FreeRTOS v10.3.1](https://github.com/Microchip-MPLAB-Harmony/CMSIS-FreeRTOS/releases/tag/v10.3.1)
+* [CMSIS-FreeRTOS v10.4.6](https://github.com/Microchip-MPLAB-Harmony/CMSIS-FreeRTOS/releases/tag/v10.4.6)
 
 ## Harmony 3 Network application examples for SAMRH71 family  v3.7.0
 

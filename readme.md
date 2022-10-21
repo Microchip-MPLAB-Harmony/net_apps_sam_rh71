@@ -1,9 +1,4 @@
-﻿---
-title: Harmony 3 TCP/IP Application for SAM RH71 Family
-nav_order: 1
-has_children: true
-has_toc: false
----
+﻿
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
 # Harmony 3 TCP/IP Application for SAM RH71 Family
@@ -36,7 +31,7 @@ This content can also be downloaded using content manager by following these [in
 | Folder     | Description                              |
 | ---        | ---                                      |
 | apps       | Demonstration of TCP/IP SAM RH71 Applications     |
-| docs       | Documents TCP/IP Application in html format for offline viewing. Use [github pages](https://microchip-mplab-harmony.github.io/net_apps_sam_rh71/) of this repository for viewing it online. |
+| docs       | Documents TCP/IP Application in html format for offline viewing. |
 
 
 ## Code Examples
@@ -50,7 +45,6 @@ The following applications are provided to demonstrate the typical or interestin
 |berkeley_udp_client  | [TCP/IP Berkeley UDP Client Application](apps/berkeley_udp_client/readme.md)  |
 |berkeley_udp_server  | [TCP/IP Berkeley UDP Server Application](apps/berkeley_udp_server/readme.md)  |
 |berkeley_udp_relay   | [TCP/IP Berkeley UDP Relay  Application](apps/berkeley_udp_relay/readme.md)   |
-|iperf_demo           | [TCP/IP IPERF Demo Applications](apps/iperf_demo/readme.md)                   |
 |tcpip_tcp_client     | [TCP/IP TCP Client Application](apps/tcpip_tcp_client/readme.md)              |
 |tcpip_tcp_client_server | [TCP/IP TCP Client Server Application](apps/tcpip_tcp_client_server/readme.md)        |
 |tcpip_client_server     | [TCP/IP Client Server Application](apps/tcpip_client_server/readme.md)              |
@@ -60,10 +54,10 @@ The following applications are provided to demonstrate the typical or interestin
 |tcpip_udp_client_server     | [TCP/IP UDP Client Server Application](apps/tcpip_udp_client_server/readme.md)  |
 
 ## TCP/IP New Application
+
 This following link guides through the steps to create a new TCP/IP application using MPLAB® Harmony 3 modules.
 
 [Create TCP/IP New Application Example](https://github.com/Microchip-MPLAB-Harmony/net/wiki/Create-your-first-tcpip-application)
-
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_rh71/blob/master/mplab_harmony_license.md)
 
