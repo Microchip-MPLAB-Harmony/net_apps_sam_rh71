@@ -181,6 +181,8 @@ extern "C" {
 #define TCPIP_DHCP_TIME_SERVER_ADDRESSES            0
 #define TCPIP_DHCP_USE_OPTION_NTP_SERVER            0
 #define TCPIP_DHCP_NTP_SERVER_ADDRESSES             0
+#define TCPIP_DHCP_ARP_LEASE_CHECK_TMO              1000
+#define TCPIP_DHCP_WAIT_ARP_FAIL_CHECK_TMO          10
 
 
 
@@ -429,6 +431,9 @@ extern "C" {
 #define DRV_ETHPHY_NEG_INIT_TMO                     1
 #define DRV_ETHPHY_NEG_DONE_TMO                     2000
 #define DRV_ETHPHY_RESET_CLR_TMO                    500
+
+
+#define TCPIP_STACK_NETWORK_INTERAFCE_COUNT  	1
 
 
 
