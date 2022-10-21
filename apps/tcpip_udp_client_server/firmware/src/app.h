@@ -57,6 +57,14 @@
 #include "system_config.h"
 #include "system_definitions.h"
 
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+extern "C" {
+
+#endif
+// DOM-IGNORE-END
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Type Definitions
@@ -64,7 +72,7 @@
 // *****************************************************************************
 
 // *****************************************************************************
-/* Application States
+/* Application states
 
   Summary:
     Application states enumeration
@@ -123,7 +131,6 @@ typedef struct
     uint64_t    mTimeOut;
 } APP_DATA;
 
-
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Callback Routines
@@ -132,7 +139,6 @@ typedef struct
 /* These routines are called by drivers when certain events occur.
 */
 
-	
 // *****************************************************************************
 // *****************************************************************************
 // Section: Application Initialization and State Machine Functions
@@ -203,12 +209,17 @@ void APP_Initialize ( void );
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP_Tasks ( void );
+void APP_Tasks( void );
 
+//DOM-IGNORE-BEGIN
+#ifdef __cplusplus
+}
+#endif
+//DOM-IGNORE-END
 
 #endif /* _APP_H */
+
 /*******************************************************************************
  End of File
  */
-
 
