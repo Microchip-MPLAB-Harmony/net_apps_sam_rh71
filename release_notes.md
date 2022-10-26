@@ -31,11 +31,15 @@ Following table provides number of peripheral library examples available for dif
 
 ### Known Issues
 
+- There are false positive mandatory MISRA violations in some of the repo files. Code will be reworked to avoid this false positive detections in a future release:
+    - system/console/src/sys_console.c(340) : Symbol 'args' (line 320) not initialized [MISRA 2012 Rule 9.1, mandatory]
+    - driver/gmac/src/dynamic/drv_gmac_lib_samE7x_V7x.c(672) : Variable 'tx_frame_state' (line 627) may not have been initialized [MISRA 2012 Rule 9.1, mandatory]
+
 ### Development Tools
 
 - [MPLAB® X IDE v6.00](https://www.microchip.com/mplab/mplab-x-ide)
 - MPLAB® X IDE plug-ins:
-  - MPLAB® Code Configurator (M§CC) v5.1.17
+  - MPLAB® Code Configurator (MCC) v5.1.17
 - [MPLAB® XC32 C/C++ Compiler v4.10](https://www.microchip.com/mplab/compilers)
 
 ### Dependent Components
