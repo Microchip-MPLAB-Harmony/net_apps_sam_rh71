@@ -46,7 +46,7 @@
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: Included Files 
 // *****************************************************************************
 // *****************************************************************************
 
@@ -79,7 +79,7 @@ int8_t _APP_PumpDNS(const char * hostname, IPV4_ADDR *ipv4Addr);
 
   Remarks:
     This structure should be initialized by the APP_Initialize function.
-
+    
     Application strings and buffers are be defined outside this structure.
 */
 
@@ -124,7 +124,7 @@ void APP_Initialize ( void )
 {
     /* Place the App state machine in its initial state. */
     appData.state = APP_TCPIP_WAIT_INIT;
-
+    
     appData.clientState = APP_TCPIP_WAIT_INIT;
     appData.serverState = APP_TCPIP_WAIT_INIT;
     appData.serverSocket = INVALID_SOCKET;
@@ -164,8 +164,11 @@ void _APP_ClientTasks()
                         SYS_CONSOLE_MESSAGE("Could not start connection\r\n");
                         appData.clientState = APP_TCPIP_WAITING_FOR_COMMAND;
                     }
-                    SYS_CONSOLE_MESSAGE("Starting connection\r\n");
-                    appData.clientState = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    else
+                    {
+                        SYS_CONSOLE_MESSAGE("Starting connection\r\n");
+                        appData.clientState = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    }
                     break;
                 }
                 if (result < 0)
@@ -211,8 +214,11 @@ void _APP_ClientTasks()
                         SYS_CONSOLE_MESSAGE("Could not start connection\r\n");
                         appData.clientState = APP_TCPIP_WAITING_FOR_COMMAND;
                     }
-                    SYS_CONSOLE_MESSAGE("Starting connection\r\n");
-                    appData.clientState = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    else
+                    {
+                        SYS_CONSOLE_MESSAGE("Starting connection\r\n");
+                        appData.clientState = APP_TCPIP_WAIT_FOR_CONNECTION;
+                    }
                 }
                 break;
             }
@@ -308,8 +314,8 @@ void _APP_ServerTasks()
             uint16_t w, w2;
             uint8_t AppBuffer[160 + 1];
             // Figure out how many bytes have been received and how many we can transmit.
-            wMaxGet = TCPIP_TCP_GetIsReady(appData.serverSocket);	// Get TCP RX FIFO byte count
-            wMaxPut = TCPIP_TCP_PutIsReady(appData.serverSocket);	// Get TCP TX FIFO free space
+            wMaxGet = TCPIP_TCP_GetIsReady(appData.serverSocket);   // Get TCP RX FIFO byte count
+            wMaxPut = TCPIP_TCP_PutIsReady(appData.serverSocket);   // Get TCP TX FIFO free space
 
             // Make sure we don't take more bytes out of the RX FIFO than we can put into the TX FIFO
             if(wMaxPut < wMaxGet)
@@ -332,12 +338,7 @@ void _APP_ServerTasks()
                 for(w2 = 0; w2 < wCurrentChunk; w2++)
                 {
                     char i = AppBuffer[w2];
-                    if(i >= 'a' && i <= 'z')
-                    {
-                            i -= ('a' - 'A');
-                            AppBuffer[w2] = i;
-                    }
-                    else if(i == '\x1b')   //escape
+                    if(i == '\x1b')   //escape
                     {
                         appData.serverState = APP_TCPIP_CLOSING_CONNECTION;
                         SYS_CONSOLE_MESSAGE("Connection was closed\r\n");
@@ -386,22 +387,22 @@ void APP_Tasks ( void )
     TCPIP_NET_HANDLE    netH;
     int                 i, nNets;
 
-    switch ( appData.state )
+    switch(appData.state)
     {
         case APP_TCPIP_WAIT_INIT:
             tcpipStat = TCPIP_STACK_Status(sysObj.tcpip);
             if(tcpipStat < 0)
             {   // some error occurred
-                SYS_CONSOLE_MESSAGE("APP: TCP/IP stack initialization failed!\r\n");
+                SYS_CONSOLE_MESSAGE(" APP: TCP/IP stack initialization failed!\r\n");
                 appData.state = APP_TCPIP_ERROR;
             }
             else if(tcpipStat == SYS_STATUS_READY)
-        {
+            {
                 // now that the stack is ready we can check the
                 // available interfaces
                 nNets = TCPIP_STACK_NumberOfNetworksGet();
                 for(i = 0; i < nNets; i++)
-            {
+                {
 
                     netH = TCPIP_STACK_IndexToNet(i);
                     netName = TCPIP_STACK_NetNameGet(netH);
@@ -411,11 +412,11 @@ void APP_Tasks ( void )
                     SYS_CONSOLE_PRINT("    Interface %s on host %s - NBNS enabled\r\n", netName, netBiosName);
 #else
                     SYS_CONSOLE_PRINT("    Interface %s on host %s - NBNS disabled\r\n", netName, netBiosName);
-#endif // defined(TCPIP_STACK_USE_NBNS)
+#endif  // defined(TCPIP_STACK_USE_NBNS)
                     (void)netName;          // avoid compiler warning 
                     (void)netBiosName;      // if SYS_CONSOLE_PRINT is null macro
 
-            }
+                }
                 appData.state = APP_TCPIP_WAIT_FOR_IP;
 
             }
@@ -428,8 +429,8 @@ void APP_Tasks ( void )
             // display the new value on the system console
             nNets = TCPIP_STACK_NumberOfNetworksGet();
 
-            for(i = 0; i < nNets; i++)
-        {
+            for (i = 0; i < nNets; i++)
+            {
                 netH = TCPIP_STACK_IndexToNet(i);
                 if(!TCPIP_STACK_NetIsReady(netH))
                 {
@@ -528,9 +529,9 @@ int8_t _APP_PumpDNS(const char * hostname, IPV4_ADDR *ipv4Addr)
         default:
             SYS_CONSOLE_MESSAGE("TCPIP_DNS_IsResolved returned failure\r\n");
             break;
-        }
-    return retval;
     }
+    return retval;
+}
 
 /*******************************************************************************
  End of File
