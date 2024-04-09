@@ -14,7 +14,7 @@
 
 // DOM-IGNORE-BEGIN
 /*****************************************************************************
- Copyright (C) 2021 Microchip Technology Inc. and its subsidiaries.
+ Copyright (C) 2012-2024 Microchip Technology Inc. and its subsidiaries.
 
 Microchip Technology Inc. and its subsidiaries.
 
@@ -57,11 +57,11 @@ static void _APP_Commands_IPVersion(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char*
 
 static const SYS_CMD_DESCRIPTOR    appCmdTbl[]=
 {
-    {"sendudppacket",     _APP_Commands_SendUDPPacket,              ": Sends the UDP Packet"},
-    {"getudppacketoptions",     _APP_Commands_GetOptions,              ": Gets the hostname, port and message"},
-    {"setudppacketoptions",     _APP_Commands_SetOptions,              ": Sets the current hostname, port, and message"},
+    {"sendudp",     _APP_Commands_SendUDPPacket,        ": Sends the UDP Packet"},
+    {"getopt",      _APP_Commands_GetOptions,           ": Gets the hostname, port and message"},
+    {"setopt",      _APP_Commands_SetOptions,           ": Sets the current hostname, port, and message"},
 #ifdef TCPIP_STACK_USE_IPV6
-    {"ipver",       _APP_Commands_IPVersion,                     ": Changes the IP version to use"},
+    {"ipver",       _APP_Commands_IPVersion,            ": Changes the IP version to use"},
 #endif
 };
 
@@ -91,8 +91,8 @@ void _APP_Commands_SendUDPPacket(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** a
 
     if (argc != 1)
     {
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: sendudppacket\r\n");
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: sendudppacket\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: sendudp\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: sendudp\r\n");
         return;
     }
     APP_Send_Packet = true;
@@ -105,8 +105,8 @@ void _APP_Commands_SetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv
 
     if (argc != 4)
     {
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: setudppacketoptions <hostname> <port> <message>\r\n");
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: setudppacketoptions 10.0.1.4 9760 Hello\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: setopt <hostname> <port> <message>\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: setopt 10.0.1.4 9760 Hello\r\n");
         return;
     }
 
@@ -115,7 +115,7 @@ void _APP_Commands_SetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv
     strcpy(APP_Message_Buffer, argv[3]);
 }
 
-char bufferArea[3][80];
+char bufferArea[3][MAX_URL_SIZE + 20];
 
 void _APP_Commands_GetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv)
 {
@@ -123,17 +123,17 @@ void _APP_Commands_GetOptions(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv
 
     if (argc != 1)
     {
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: getudppacketoptions\r\n");
-        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: getudppacketoptions\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Usage: getopt\r\n");
+        (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Ex: getopt\r\n");
         return;
     }
 
      (*pCmdIO->pCmdApi->msg)(cmdIoParam, "Current UDP Options:\r\n");
-     sprintf(bufferArea[0], "\thostname: '%s'\r\n", APP_Hostname_Buffer);
+     snprintf(bufferArea[0], sizeof(bufferArea[0]), "\thostname: '%s'\r\n", APP_Hostname_Buffer);
      (*pCmdIO->pCmdApi->msg)(cmdIoParam, bufferArea[0]);
-     sprintf(bufferArea[1], "\tport: '%s'\r\n", APP_Port_Buffer);
+     snprintf(bufferArea[1], sizeof(bufferArea[1]), "\tport: '%s'\r\n", APP_Port_Buffer);
      (*pCmdIO->pCmdApi->msg)(cmdIoParam, bufferArea[1]);
-     sprintf(bufferArea[2], "\tmessage: '%s'\r\n", APP_Message_Buffer);
+     snprintf(bufferArea[2], sizeof(bufferArea[2]), "\tmessage: '%s'\r\n", APP_Message_Buffer);
      (*pCmdIO->pCmdApi->msg)(cmdIoParam, bufferArea[2]);
 
 }
