@@ -2,11 +2,11 @@
 
 The TCP/IP TCP Server configuration demonstrates creating a network server that uses the MPLAB Harmony TCP API to create a TCP/IP echo server on port 9760.
 
-**TCP/IP TCP Server MHC Configuration**
+**TCP/IP TCP Server MCC Configuration**
 
 The following Project Graph diagram shows the Harmony components included in the TCP Server demonstration application.
 
--   MHC is launched by selecting **Tools \> Embedded \> MPLAB® Harmony 3 Configurator** from the MPLAB X IDE, demo project is ready to be configured and regenerated.
+-   MCC is launched by selecting **Tools \> Embedded \> MPLAB® Code Configurator** from the MPLAB X IDE, demo project is ready to be configured and regenerated.
 
 -   **TCP/IP Root Layer Project Graph**
 
@@ -20,13 +20,13 @@ The following Project Graph diagram shows the Harmony components included in the
 
 -   **TCP/IP Required Application**
 
-    TCP/IP demo use these application module components for this demo. **Announce** module to discover the Microchip devices within a local network.
+    TCP/IP demo use these application module components for this demo.
 
     **DHCP Client** module to discover the IPv4 address from the nearest DHCP Server.
 
     **DNS Client** provides DNS resolution capabilities to the stack.
 
-    ![tcpip_samrh71_project](../../docs/GUID-FE61D479-C73B-4428-8E3B-A1329D5C608E-low.png)
+    ![tcpip_samrh71_project](../../docs/GUID-E9D9A3FC-0394-4976-95E6-B6A907268CE9-low.png)
 
 -   **TCPIP Driver Layer**
 
@@ -39,15 +39,15 @@ The following Project Graph diagram shows the Harmony components included in the
 
 **TCP/IP TCP Server Hardware Configuration**
 
-This section describes the required default hardware configuration for SAM RH71 Evaluation Kit that can be used for the respective application demonstration.
+This section describes the required default hardware configuration for SAMRH71 Evaluation Kit that can be used for the respective application demonstration.
 
 -   For initial setup, you can refer to the [Getting Started with SAMRH71F20 Evaluation Kit](https://ww1.microchip.com/downloads/en/AppNotes/Getting_Started_with_the_SAMRH71_Microcontroller_DS00003213C.pdf) application note.
 
 -   Set all SW5 DIP Switch to 0.
 
--   Connect the micro USB cable from the computer to the J15 USB connector on the SAM RH71 Evaluation Kit
+-   Connect the micro USB cable from the computer to the J15 USB connector on the SAMRH71 Evaluation Kit
 
--   Establish a connection between the router/switch with the SAM RH71 Evaluation Kit through the RJ45 connector
+-   Establish a connection between the router/switch with the SAMRH71 Evaluation Kit through the RJ45 connector
 
     ![required_hardware](../../docs/GUID-8B619CD8-65FE-464A-97AC-74560E0CDE8F-low.png)
 
@@ -56,11 +56,11 @@ This section describes the required default hardware configuration for SAM RH71 
 
 **MPLAB X IDE Project**
 
-This table list the name and location of the MPLAB X IDE project folder for the demonstration.
+This table lists the name and location of the MPLAB X IDE project folder for the demonstration.
 
 |Project Name|Target Device|Target Development Board|Description|
 |------------|-------------|------------------------|-----------|
-|sam\_rh71\_ek.X|ATSAMRH71F20C|SAMRH71F20-EK|Demonstrates the Berkeley TCP Server on development board with ATSAMRH71F20C device. This implementation is based on Bare Metal \( non-RTOS\).|
+|sam\_rh71\_ek.X|ATSAMRH71F20C|SAMRH71F20-EK|Demonstrates the TCP/IP TCP Server on development board with ATSAMRH71F20C device. This implementation is based on Bare Metal \( non-RTOS\).|
 
 **Running The Demonstration**
 
@@ -78,9 +78,7 @@ This table list the name and location of the MPLAB X IDE project folder for the 
 
     5.  When the DHCP client is enabled in the demonstration, wait for the DHCP server to assign an IP address for the development board. This will be printed on the serial port terminal.
 
-        -   Alternatively: Use the Announce service or ping to get the IP address of the board.
-
-            -   Run **tcpip\_discoverer.jar** to discover the IPv4 and IPv6 address for the board.
+        -   Alternatively: You can use the ping service to find the IP address of the board.
 
 3.  Execution :
 
@@ -88,7 +86,7 @@ This table list the name and location of the MPLAB X IDE project folder for the 
 
     2.  Send a TCP packet to the IP address of the hardware board using port 9760 from any TCP Client application running on the computer \(SocketTest, Packet Sender etc\).
 
-    3.  The TCP Server demonstration running on the evaluation kit will echo back everything it receives along the connection.
+    3.  The TCP Server demonstration running on the evaluation kit will echo back everything it receives.
 
     4.  For TCP Server test, the TCP Client application is required to run on the computer \(SocketTest, Packet Sender etc\). In this demonstration, we use the program, [SocketTest](http://sockettest.sourceforge.net/). This demonstration is tested with **SocketTest v3.0**.
 

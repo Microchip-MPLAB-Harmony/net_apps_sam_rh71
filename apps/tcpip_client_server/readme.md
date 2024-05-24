@@ -2,11 +2,11 @@
 
 The TCP/IP TCP & UDP Client Server configuration demonstrates creating a network client and a network server that uses both TCP and UDP socket APIs respectively.
 
-**TCP/IP TCP and UDP Client Server MHC Configuration**
+**TCP/IP TCP and UDP Client Server MCC Configuration**
 
 The following Project Graph diagram shows the Harmony components included in the TCP and UDP Client Server demonstration application.
 
--   MHC is launched by selecting **Tools \> Embedded \> MPLAB® Harmony 3 Configurator** from the MPLAB X IDE, demo project is ready to be configured and regenerated.
+-   MCC is launched by selecting **Tools \> Embedded \> MPLAB® Code Configurator** from the MPLAB X IDE, demo project is ready to be configured and regenerated.
 
 -   **TCP/IP Root Layer Project Graph**
 
@@ -14,7 +14,7 @@ The following Project Graph diagram shows the Harmony components included in the
 
     This is the basic configuration with SYS\_CONSOLE, SYS\_DEBUG and SYS\_COMMAND modules. These modules are required for TCP/IP command execution.
 
-    ![tcpip_samrh71_project](../../docs/GUID-D16A1480-922F-4C4D-8A52-82EF1CA9B4CD-low.png)
+    ![tcpip_samrh71_project](../../docs/GUID-24210A60-9DC0-41A0-A466-F73AB26D536C-low.png)
 
     **FreeRTOS** component is required for RTOS application.
 
@@ -22,38 +22,52 @@ The following Project Graph diagram shows the Harmony components included in the
 
 -   **TCP/IP Required Application**
 
-    TCP/IP demo use these application module components for this demo. **Announce** module to discover the Microchip devices within a local network.
+    TCP/IP demo use these application module components for this demo.
 
     **DHCP Client** module to discover the IPv4 address from the nearest DHCP Server.
 
     **DNS Client** provides DNS resolution capabilities to the stack.
 
-    **Berkeley API** module provides the Berkeley\_Socket\_Distribution \(BSD\) wrapper to the native Microchip TCP/IP Stack APIs. During this component selection, the required transport and network modules are also selected.
-
-    ![tcpip_samrh71_project](../../docs/GUID-FE61D479-C73B-4428-8E3B-A1329D5C608E-low.png)
+    ![tcpip_samrh71_project](../../docs/GUID-E9D9A3FC-0394-4976-95E6-B6A907268CE9-low.png)
 
 -   **TCPIP Driver Layer**
 
-    **Internal ethernet driver\(GMAC\)** is enabled with the external **KSZ8061 PHY driver** library.
+    1.  For SAMRH71F20-EK Evaluation Kit: **Internal ethernet driver\(GMAC\)** is enabled with the external **KSZ8061 PHY driver** library.
 
-    ![tcpip_samrh71_project_driver](../../docs/GUID-53EC3088-7D72-48E5-9C2A-AECE32A67AB0-low.png)
+        ![tcpip_samrh71_project_driver](../../docs/GUID-53EC3088-7D72-48E5-9C2A-AECE32A67AB0-low.png)
+
+    2.  For SAMRH71F20-TFBGA-EK Evaluation Kit: **Internal ethernet driver\(GMAC\)** is enabled with the external **VSC8540 PHY driver** library.
+
+        ![tcpip_samrh71_project_driver](../../docs/GUID-631E59B9-1F5B-4262-AC9D-DD54DABD254B-low.png)
 
     The MIIM Driver supports asynchronous read/write and scan operations for accessing the external PHY registers and notification when MIIM operations have completed.
 
 
 **TCP/IP TCP and UDP Client Server Hardware Configuration**
 
-This section describes the required default hardware configuration for SAM RH71 Evaluation Kit that can be used for the respective application demonstration.
+This section describes the required default hardware configuration for SAMRH71 Evaluation Kits that can be used for the respective application demonstration.
 
--   For initial setup, you can refer to the [Getting Started with SAMRH71F20 Evaluation Kit](https://ww1.microchip.com/downloads/en/AppNotes/Getting_Started_with_the_SAMRH71_Microcontroller_DS00003213C.pdf) application note.
+For initial setup, you can refer to the [Getting Started with SAMRH71F20 Evaluation Kit](https://ww1.microchip.com/downloads/en/AppNotes/Getting_Started_with_the_SAMRH71_Microcontroller_DS00003213C.pdf) application note.
 
--   Set all SW5 DIP Switch to 0.
+1.  This section describes the required default hardware configuration to use SAMRH71F20-EK Evaluation Kit example:
 
--   Connect the micro USB cable from the computer to the J15 USB connector on the SAM RH71 Evaluation Kit
+    -   Set all SW5 DIP Switch to 0.
 
--   Establish a connection between the router/switch with the SAM RH71 Evaluation Kit through the RJ45 connector
+    -   Connect the mini USB cable from the computer to the J15 USB connector on the SAMRH71 Evaluation Kit
 
-    ![required_hardware](../../docs/GUID-8B619CD8-65FE-464A-97AC-74560E0CDE8F-low.png)
+    -   Establish a connection between the router/switch with the SAMRH71 Evaluation Kit through the RJ45 connector
+
+        ![required_hardware](../../docs/GUID-8B619CD8-65FE-464A-97AC-74560E0CDE8F-low.png)
+
+2.  This section describes the required default hardware configuration to use SAMRH71F20-TFBGA-EK Evaluation Kit example:
+
+    -   Set all SW4 DIP Switch to 0.
+
+    -   Connect the micro USB cable from the computer to the DEBUG USB connector on the SAMRH71 TFBGA Evaluation Kit
+
+    -   Establish a connection between the router/switch with the SAMRH71 Evaluation Kit through the RJ45 connector
+
+        ![required_hardware_tfbga](../../docs/GUID-33DD92BA-12E5-4424-8B20-978ABAA55EF3-low.png)
 
 
 **TCP/IP TCP and UDP Client Server Running Application**
@@ -62,11 +76,12 @@ The Client Server configuration use combination of both TCP and UDP sockets for 
 
 **MPLAB X IDE Project**
 
-This table list the name and location of the MPLAB X IDE project folder for the demonstration.
+This table lists the name and location of the MPLAB X IDE project folder for the demonstration.
 
 |Project Name|Target Device|Target Development Board|Description|
 |------------|-------------|------------------------|-----------|
-|sam\_rh71\_ek.X|ATSAMRH71F20C|SAMRH71F20-EK|Demonstrates the TCP/IP TCP and UDP Client Server on development board with ATSAMRH71F20C device. This implementation is based on FreeRTOS.|
+|sam\_rh71\_ek.X|ATSAMRH71F20C|SAMRH71F20-EK|Demonstrates the TCP/IP TCP and UDP Client Server on SAMRH71F20-EK development board. This implementation is based on FreeRTOS.|
+|sam\_rh71\_tfbga.X|ATSAMRH71F20C|SAMRH71F20-TFBGA-EK|Demonstrates the TCP/IP TCP and UDP Client Server on SAMRH71F20-TFBGA-EK development board. This implementation is based on FreeRTOS.|
 
 **Running The Demonstration**
 
@@ -84,9 +99,7 @@ This table list the name and location of the MPLAB X IDE project folder for the 
 
     5.  When the DHCP client is enabled in the demonstration, wait for the DHCP server to assign an IP address for the development board. This will be printed on the serial port terminal.
 
-        -   Alternatively: Use the Announce service or ping to get the IP address of the board.
-
-            -   Run **tcpip\_discoverer.jar** to discover the IPv4 and IPv6 address for the board.
+        -   Alternatively: You can use the ping service to find the IP address of the board.
 
 3.  Execution :
 
@@ -108,11 +121,11 @@ This table list the name and location of the MPLAB X IDE project folder for the 
 
         -   They can open or close the sockets, send messages to the socket they are connected to, they can display the received messages, etc.
 
-        -   Using your preferred networking tools on the PC side \( netcat, Packet Sender, Hercules, python scripts, etc., etc. \) create sockets that talk to the ones opened by the client server application.
+        -   Use your preferred networking tools on the PC side \( netcat, Packet Sender, Hercules, python scripts, etc. \) to create sockets that talk to the ones opened by the client server application.
 
         -   This way you can exchange data with any/all of the communication threads that the demonstration creates.
 
-    5.  After the successful broad bring up, the console output becomes
+    5.  After the successful board bring up, the console output becomes
 
         ![tcpip_client_server_project](../../docs/GUID-C62B1214-1B85-4E27-89B5-E783E905D246-low.png)
 

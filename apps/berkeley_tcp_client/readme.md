@@ -2,11 +2,11 @@
 
 The Berkeley TCP Client configuration demonstrates creating a network client with the Berkeley API to make a TCP/IP connection to a web server.
 
-**TCP/IP Berkeley TCP Client MHC Configuration**
+**TCP/IP Berkeley TCP Client MCC Configuration**
 
 The following Project Graph diagram shows the Harmony components included in the TCP Client demonstration application.
 
--   MHC is launched by selecting **Tools \> Embedded \> MPLAB® Harmony 3 Configurator** from the MPLAB X IDE, demo project is ready to be configured and regenerated.
+-   MCC is launched by selecting **Tools \> Embedded \> MPLAB® Code Configurator** from the MPLAB X IDE, demo project is ready to be configured and regenerated.
 
 -   **TCP/IP Root Layer Project Graph**
 
@@ -28,7 +28,7 @@ The following Project Graph diagram shows the Harmony components included in the
 
     **DNS Client** provides DNS resolution capabilities to the stack.
 
-    **Berkeley API** module provides the Berkeley\_Socket\_Distribution \(BSD\) wrapper to the native Microchip TCP/IP Stack APIs. During this component selection, the required transport and network modules are also selected.
+    **Berkeley API** module provides the Berkeley\_Socket\_Distribution \(BSD\) wrapper to the native Microchip TCP/IP Stack APIs. The required transport and network modules are automatically selected when adding this component.
 
     ![tcpip_samrh71_project](../../docs/GUID-FE61D479-C73B-4428-8E3B-A1329D5C608E-low.png)
 
@@ -43,22 +43,22 @@ The following Project Graph diagram shows the Harmony components included in the
 
 **TCP/IP Berkeley TCP Client Hardware Configuration**
 
-This section describes the required default hardware configuration for SAM RH71 Evaluation Kit that can be used for the respective application demonstration.
+This section describes the required default hardware configuration for SAMRH71 Evaluation Kit that can be used for the respective application demonstration.
 
 -   For initial setup, you can refer to the [Getting Started with SAMRH71F20 Evaluation Kit](https://ww1.microchip.com/downloads/en/AppNotes/Getting_Started_with_the_SAMRH71_Microcontroller_DS00003213C.pdf) application note.
 
 -   Set all SW5 DIP Switch to 0.
 
--   Connect the micro USB cable from the computer to the J15 USB connector on the SAM RH71 Evaluation Kit
+-   Connect the micro USB cable from the computer to the J15 USB connector on the SAMRH71 Evaluation Kit
 
--   Establish a connection between the router/switch with the SAM RH71 Evaluation Kit through the RJ45 connector
+-   Establish a connection between the router/switch with the SAMRH71 Evaluation Kit through the RJ45 connector
 
     ![required_hardware](../../docs/GUID-8B619CD8-65FE-464A-97AC-74560E0CDE8F-low.png)
 
 
 **TCP/IP Berkeley TCP Client Running Application**
 
-This table list the name and location of the MPLAB X IDE project folder for the demonstration.
+This table lists the name and location of the MPLAB X IDE project folder for the demonstration.
 
 |Project Name|Target Device|Target Development Board|Description|
 |------------|-------------|------------------------|-----------|
@@ -86,7 +86,7 @@ This table list the name and location of the MPLAB X IDE project folder for the 
 
 3.  Execution :
 
-    After the successful broad bring up, the console output becomes
+    After the successful board bring up, the console output becomes
 
     ![tcpip_tcp_client_project](../../docs/GUID-C62B1214-1B85-4E27-89B5-E783E905D246-low.png)
 

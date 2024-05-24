@@ -45,9 +45,9 @@ The following applications are provided to demonstrate the typical or interestin
 |berkeley_udp_client  | [TCP/IP Berkeley UDP Client Application](apps/berkeley_udp_client/readme.md)  |
 |berkeley_udp_server  | [TCP/IP Berkeley UDP Server Application](apps/berkeley_udp_server/readme.md)  |
 |berkeley_udp_relay   | [TCP/IP Berkeley UDP Relay  Application](apps/berkeley_udp_relay/readme.md)   |
+|tcpip_client_server     | [TCP/IP Client Server Application](apps/tcpip_client_server/readme.md)              |
 |tcpip_tcp_client     | [TCP/IP TCP Client Application](apps/tcpip_tcp_client/readme.md)              |
 |tcpip_tcp_client_server | [TCP/IP TCP Client Server Application](apps/tcpip_tcp_client_server/readme.md)        |
-|tcpip_client_server     | [TCP/IP Client Server Application](apps/tcpip_client_server/readme.md)              |
 |tcpip_tcp_server     | [TCP/IP TCP Server Application](apps/tcpip_tcp_server/readme.md)              |
 |tcpip_udp_client     | [TCP/IP UDP Client Application](apps/tcpip_udp_client/readme.md)              |
 |tcpip_udp_server     | [TCP/IP UDP Server Application](apps/tcpip_udp_server/readme.md)              |
