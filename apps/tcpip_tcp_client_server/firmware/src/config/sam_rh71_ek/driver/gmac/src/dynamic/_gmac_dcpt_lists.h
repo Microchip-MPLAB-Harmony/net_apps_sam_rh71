@@ -1,27 +1,25 @@
-/*****************************************************************************
- Copyright (C) 2008-2018 Microchip Technology Inc. and its subsidiaries.
+/*
+Copyright (C) 2008-2023, Microchip Technology Inc., and its subsidiaries. All rights reserved.
 
-Microchip Technology Inc. and its subsidiaries.
+The software and documentation is provided by microchip and its contributors
+"as is" and any express, implied or statutory warranties, including, but not
+limited to, the implied warranties of merchantability, fitness for a particular
+purpose and non-infringement of third party intellectual property rights are
+disclaimed to the fullest extent permitted by law. In no event shall microchip
+or its contributors be liable for any direct, indirect, incidental, special,
+exemplary, or consequential damages (including, but not limited to, procurement
+of substitute goods or services; loss of use, data, or profits; or business
+interruption) however caused and on any theory of liability, whether in contract,
+strict liability, or tort (including negligence or otherwise) arising in any way
+out of the use of the software and documentation, even if advised of the
+possibility of such damage.
 
-Subject to your compliance with these terms, you may use Microchip software 
-and any derivatives exclusively with Microchip products. It is your 
-responsibility to comply with third party license terms applicable to your 
-use of third party software (including open source software) that may 
-accompany Microchip software.
-
-THIS SOFTWARE IS SUPPLIED BY MICROCHIP "AS IS". NO WARRANTIES, WHETHER 
-EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS SOFTWARE, INCLUDING ANY IMPLIED 
-WARRANTIES OF NON-INFRINGEMENT, MERCHANTABILITY, AND FITNESS FOR A PARTICULAR 
-PURPOSE.
-
-IN NO EVENT WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
-INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY KIND 
-WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF MICROCHIP HAS 
-BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE FORESEEABLE. TO THE 
-FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN 
-ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY, 
-THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*****************************************************************************/
+Except as expressly permitted hereunder and subject to the applicable license terms
+for any third-party software incorporated in the software and any applicable open
+source software license terms, no license or other rights, whether express or
+implied, are granted under any patent or other intellectual property rights of
+Microchip or any third party.
+*/
 
 
 
@@ -35,12 +33,12 @@ THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 */
 typedef enum  
 {
-	GMAC_QUE_0 = 0,
-	GMAC_QUE_1 = 1,
-	GMAC_QUE_2 = 2,
+    GMAC_QUE_0 = 0,
+    GMAC_QUE_1 = 1,
+    GMAC_QUE_2 = 2,
     GMAC_QUE_3 = 3,
-	GMAC_QUE_4 = 4,
-	GMAC_QUE_5 = 5
+    GMAC_QUE_4 = 4,
+    GMAC_QUE_5 = 5
 } GMAC_QUE_LIST;
 
 #define GMAC_QUE0_MASK      (1<<GMAC_QUE_0)
@@ -66,21 +64,21 @@ typedef enum
 
 typedef union
 {
-	uint32_t val;                   /**< 32-Bit access */
-	struct _GmacTxStatusBM 
-	{
-		uint32_t len: 11,           /**< Length of buffer */
-					reserved: 4,
-					bLastBuffer: 1, /**< Last buffer (in the current frame) */
-					bNoCRC: 1,      /**< No CRC */
-					reserved1: 10,
-					bExhausted: 1,  /**< Buffer exhausted in mid frame */
-					bUnderrun: 1,   /**< Transmit under run */
-					bError: 1,      /**< Retry limit exceeded, error detected */
-					bWrap: 1,       /**< Marks last descriptor in TD list */
-					bUsed: 1;       /**< User clear, GMAC sets this once a frame
+    uint32_t val;                   /**< 32-Bit access */
+    struct _GmacTxStatusBM 
+    {
+        uint32_t len: 11,           /**< Length of buffer */
+                    reserved: 4,
+                    bLastBuffer: 1, /**< Last buffer (in the current frame) */
+                    bNoCRC: 1,      /**< No CRC */
+                    reserved1: 10,
+                    bExhausted: 1,  /**< Buffer exhausted in mid frame */
+                    bUnderrun: 1,   /**< Transmit under run */
+                    bError: 1,      /**< Retry limit exceeded, error detected */
+                    bWrap: 1,       /**< Marks last descriptor in TD list */
+                    bUsed: 1;       /**< User clear, GMAC sets this once a frame
                                         has been successfully transmitted */
-	} bm;
+    } bm;
 } DRV_GMAC_TXDCPT_STATUS;
 
 // *****************************************************************************
@@ -96,15 +94,15 @@ typedef union
 */
 typedef union
 {
-	uint32_t val;
-	struct _GmacRxAddrBM 
-	{
-		uint32_t    bOwnership: 1, /**< User clear, GMAC set this to one once
+    uint32_t val;
+    struct _GmacRxAddrBM 
+    {
+        uint32_t    bOwnership: 1, /**< User clear, GMAC set this to one once
                                     it has successfully written a frame to
                                         memory */
                     bWrap: 1,       /**< Marks last descriptor in receive buffer */
-					addrDW: 30;     /**< Address in number of DW */
-	} bm;
+                    addrDW: 30;     /**< Address in number of DW */
+    } bm;
 } DRV_GMAC_RXDCPT_ADDR;             /**< Address, Wrap & Ownership */
 
 // *****************************************************************************
@@ -119,9 +117,9 @@ typedef union
 */
 typedef struct
 {
-	volatile DRV_GMAC_RXDCPT_ADDR rx_desc_buffaddr;
-	volatile TCPIP_MAC_PACKET_RX_STAT_PIC32C rx_desc_status;
-	
+    volatile DRV_GMAC_RXDCPT_ADDR rx_desc_buffaddr;
+    volatile TCPIP_MAC_PACKET_RX_STAT_PIC32C rx_desc_status;
+    
 } DRV_PIC32CGMAC_HW_RXDCPT; 
 
 // *****************************************************************************
@@ -136,8 +134,8 @@ typedef struct
 */
 typedef struct
 {
-	volatile uint32_t tx_desc_buffaddr;
-	volatile DRV_GMAC_TXDCPT_STATUS tx_desc_status;	
+    volatile uint32_t tx_desc_buffaddr;
+    volatile DRV_GMAC_TXDCPT_STATUS tx_desc_status; 
 } DRV_PIC32CGMAC_HW_TXDCPT;   
 
 
@@ -146,18 +144,18 @@ typedef struct
 ////////////////////////////////////////////////////////////////////////////////
 typedef struct _TAG_DRV_PIC32CGMAC_SGL_LIST_NODE
 {
-	struct _TAG_DRV_PIC32CGMAC_SGL_LIST_NODE*	next;       /**< next linked list  */      
-	void*                                       data[];     /**< generic payload */
+    struct _TAG_DRV_PIC32CGMAC_SGL_LIST_NODE*   next;       /**< next linked list  */      
+    void*                                       data[];     /**< generic payload */
 }DRV_PIC32CGMAC_SGL_LIST_NODE;                  /**< Single list for GMAC packet */ 
 
 
 typedef struct
 {
-	DRV_PIC32CGMAC_SGL_LIST_NODE*	head;	/**< Linked list head  */ 
-	DRV_PIC32CGMAC_SGL_LIST_NODE*	tail;   /**< Linked list tail  */ 
+    DRV_PIC32CGMAC_SGL_LIST_NODE*   head;   /**< Linked list head  */ 
+    DRV_PIC32CGMAC_SGL_LIST_NODE*   tail;   /**< Linked list tail  */ 
     int             nNodes;                 /**< number of nodes in the list */ 
 
-}DRV_PIC32CGMAC_SGL_LIST;	// single linked list
+}DRV_PIC32CGMAC_SGL_LIST;   // single linked list
 
 //Initialize Single List
 static  __inline__ void  __attribute__((always_inline)) DRV_PIC32CGMAC_SingleListInitialize(DRV_PIC32CGMAC_SGL_LIST* pL)
