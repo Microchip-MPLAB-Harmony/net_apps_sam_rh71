@@ -8000,7 +8000,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_tfbga_freertos\system\command\src\sys_command.c</file>
-         <hash>84360285206bc304af70cc0b29fea061345ba6e27674613b5bb947da9fda0768</hash>
+         <hash>e13dfdfba00c4c9b65ef425ae0a568913d754b64e58bda03f37627b23bf9659a</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_tfbga_freertos\system\command\sys_command.h</file>
@@ -8040,7 +8040,7 @@
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_tfbga_freertos\system\debug\sys_debug.h</file>
-         <hash>4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882</hash>
+         <hash>9ee0362649aa389b355ecff1ce0e64d124f8f83eda7e40a0c5195ee099c1a0ff</hash>
       </entry>
       <entry>
          <file>..\src\config\sam_rh71_tfbga_freertos\system\int\src\sys_int.c</file>
@@ -8476,7 +8476,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
+         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm7.h</file>
