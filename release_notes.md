@@ -3,6 +3,43 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Harmony 3 Network application examples for SAMRH71 family v3.9.0
+
+### Development kit and demo application support
+
+Following table provides number of peripheral library examples available for different development kits.
+
+| Development Kits  | MPLABx applications |
+|:-----------------:|:-------------------:|
+| SAM RH71 Evaluation Kit | 13 |
+
+### New Features
+
+- Applications are updated and regenerated with latest NET v3.11.1.
+- Added one application examples for SAMRH71-TFBGA-EK evaluation kit with VSC8540 PHY
+
+### Known Issues
+
+- Applications have mandatory MISRA violations in one of the depedency module. Code will be reworked to avoid this issue in a future release:
+  - src/config/sam_rh71_ek/crypto/src/crypto.c(885) : The size_t argument passed to any function in shall have an appropriate value. [MISRA 2012 Rule 21.18, mandatory]
+
+### Development Tools
+
+- [MPLAB® X IDE v6.20](https://www.microchip.com/mplab/mplab-x-ide)
+- MPLAB® X IDE plug-ins:
+  - MPLAB® Code Configurator (MCC) v5.5.1
+- [MPLAB® XC32 C/C++ Compiler v4.40](https://www.microchip.com/mplab/compilers)
+
+### Dependent Components
+
+* [Net v3.11.1](https://github.com/Microchip-MPLAB-Harmony/net/releases/tag/v3.11.1)
+* [CSP v3.18.4](https://github.com/Microchip-MPLAB-Harmony/csp/releases/tag/v3.18.4)
+* [Core v3.13.1](https://github.com/Microchip-MPLAB-Harmony/core/releases/tag/v3.13.1)
+* [BSP v3.18.0](https://github.com/Microchip-MPLAB-Harmony/bsp/releases/tag/v3.18.0)
+* [Crypto v3.8.1](https://github.com/Microchip-MPLAB-Harmony/crypto/releases/tag/v3.8.1)
+* [Wolfssl v5.4.0](https://github.com/Microchip-MPLAB-Harmony/wolfssl/releases/tag/v5.4.0)
+* [CMSIS-FreeRTOS v10.5.1](https://github.com/Microchip-MPLAB-Harmony/CMSIS-FreeRTOS/releases/tag/v10.5.1)
+
 ## Harmony 3 Network application examples for SAMRH71 family v3.8.0
 
 ### Development kit and demo application support

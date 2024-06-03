@@ -31,8 +31,7 @@ This content can also be downloaded using content manager by following these [in
 | Folder     | Description                              |
 | ---        | ---                                      |
 | apps       | Demonstration of TCP/IP SAM RH71 Applications     |
-| docs       | Documents TCP/IP Application in html format for offline viewing. |
-
+| docs       | Contains documentation in html format for offline viewing. Use [onlinedocs site](https://onlinedocs.microchip.com/oxy/GUID-117E243D-65DF-4E3C-A944-9405AC1A0B1B-en-US-2/index.html) of this repository for viewing it online. |
 
 ## Code Examples
 
@@ -53,11 +52,7 @@ The following applications are provided to demonstrate the typical or interestin
 |tcpip_udp_server     | [TCP/IP UDP Server Application](apps/tcpip_udp_server/readme.md)              |
 |tcpip_udp_client_server     | [TCP/IP UDP Client Server Application](apps/tcpip_udp_client_server/readme.md)  |
 
-## TCP/IP New Application
-
-This following link guides through the steps to create a new TCP/IP application using MPLAB® Harmony 3 modules.
-
-[Create TCP/IP New Application Example](https://github.com/Microchip-MPLAB-Harmony/net/wiki/Create-your-first-tcpip-application)
+____
 
 [![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/net_apps_sam_rh71/blob/master/mplab_harmony_license.md)
 

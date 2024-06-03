@@ -86,21 +86,21 @@ This table lists the name and location of the MPLAB X IDE project folder for the
 
 3.  Execution:
 
-    **setudppacketoptions**, **getudppacketoptions** and **sendudppacket** are the UDP client APP commands.
+    **setopt**, **getopt** and **sendudp** are the UDP client APP commands.
 
     -   For UDP Client test, the UDP Server application is required to run on the computer \(SocketTest, Packet Sender etc\). This demonstration is tested with **[SocketTest v3.0](http://sockettest.sourceforge.net/)**.
 
-    -   Set the UDP packet options by typing **setudppacketoptions** at the terminal console.
+    -   Set the UDP packet options by typing **setopt** at the terminal console.
 
-    -   Verify the UDP packet settings by typing **getudppacketoptions** at the terminal console.
+    -   Verify the UDP packet settings by typing **getopt** at the terminal console.
 
-    -   Open UDP Server application \(**SocketTest** software\) and select UDP server for the configured port number as per the command **setudppacketoptions**.
+    -   Open UDP Server application \(**SocketTest** software\) and select UDP server for the configured port number as per the command **setopt**.
 
-    -   Send the UDP packet to the destination using the **sendudppacket** command.
+    -   Send the UDP packet to the destination using the **sendudp** command.
 
-    -   After sending the **sendudppacket** command, the demonstration will make a DNS query to look up the host name and send a UDP packet to that host.
+    -   After sending the **sendudp** command, the demonstration will make a DNS query to look up the host name and send a UDP packet to that host.
 
-    -   The output message will be received by the UDP server on the port that is configured by the command **setudppacketoptions**.
+    -   The output message will be received by the UDP server on the port that is configured by the command **setopt**.
 
 
 **Parent topic:**[Harmony 3 TCP/IP Application for SAM RH71 Family](GUID-9F654EF7-6F64-4E62-98D9-7F1BDF366DE8.md)

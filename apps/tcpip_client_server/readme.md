@@ -165,11 +165,11 @@ This table lists the name and location of the MPLAB X IDE project folder for the
 
         -   Open the **SocketTest** software and configure a UDP server by setting the computer IP address and a listening port. Then start the UDP server by pressing **Start Listening** button.
 
-        -   Set the TCP client options \(Address and port\) by using the **usrv4\_c1** command at the terminal console.
+        -   Set the UDP client options \(Address and port\) by using the **usrv4\_c1** command at the terminal console.
 
-        -   Open the TCP client socket by typing **uopen\_c1** at the terminal console.
+        -   Open the UDP client socket by typing **uopen\_c1** at the terminal console.
 
-        -   Send messages to the TCP server by typing **umsg\_c1** at the terminal console.
+        -   Send messages to the UDP server by typing **umsg\_c1** at the terminal console.
 
 
 **Parent topic:**[Harmony 3 TCP/IP Application for SAM RH71 Family](GUID-9F654EF7-6F64-4E62-98D9-7F1BDF366DE8.md)
